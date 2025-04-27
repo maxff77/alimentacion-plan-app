@@ -21,8 +21,9 @@ export function QuickOptions({ options }: QuickOptionsProps) {
         ))}
       </div>
       <p className="text-sm text-default-500 mt-4">
-        Estas opciones son ideales para los días lunes y miércoles cuando Richard tiene poco tiempo.
+        Estas opciones son ideales para los días lunes y miércoles cuando
+        Richard tiene poco tiempo.
       </p>
     </div>
   );
-} 
+}

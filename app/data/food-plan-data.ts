@@ -1,250 +1,384 @@
 // Schedule data
 export const richardSchedule = [
-  { meal: "Desayuno", time: "7:00 am", note: "" },
-  { meal: "Media mañana", time: "10:00 am", note: "portátil para la escuela" },
-  { meal: "Almuerzo", time: "12:00 pm/1:00 pm", note: "Lun/Mié: 12:00 pm (portátil), Mar: 1:00 pm (en casa)" },
-  { meal: "Merienda", time: "4:00 pm", note: "" },
-  { meal: "Cena", time: "7:00 pm", note: "" },
+  { meal: "Desayuno", time: "6:15-6:30 am", note: "antes de salir" },
+  { meal: "Refrigerio mañana", time: "9:45-10:00 am", note: "entre clases" },
+  {
+    meal: "Comida L/M",
+    time: "12:45-1:00 pm + 4:00-4:30 pm",
+    note: "Snack ligero + comida completa al llegar a casa",
+  },
+  {
+    meal: "Comida Ma/J",
+    time: "12:00-12:30 pm",
+    note: "",
+  },
+  { meal: "Cena", time: "7:30-8:00 pm", note: "" },
 ];
 
 export const fatherSchedule = [
-  { meal: "Desayuno", time: "7:00 am", note: "" },
-  { meal: "Media mañana", time: "10:00 am", note: "" },
-  { meal: "Almuerzo", time: "1:00 pm", note: "" },
-  { meal: "Merienda", time: "4:00 pm", note: "" },
-  { meal: "Cena", time: "7:00 pm", note: "" },
-  { meal: "Refrigerio nocturno", time: "9:00 pm", note: "para mejorar el sueño" },
+  { meal: "Medicación", time: "al despertar", note: "en ayunas" },
+  {
+    meal: "Desayuno",
+    time: "7:30-8:00 am",
+    note: "30 min después de medicación",
+  },
+  { meal: "Refrigerio mañana", time: "10:30-11:00 am", note: "" },
+  { meal: "Comida", time: "1:30-2:00 pm", note: "" },
+  { meal: "Refrigerio tarde", time: "4:30-5:00 pm", note: "" },
+  {
+    meal: "Cena ligera",
+    time: "7:00-7:30 pm",
+    note: "mínimo 2 horas antes de dormir",
+  },
 ];
 
 // Weekly meal plans
 export const richardMealPlan = {
   monday: [
-    { name: "Desayuno", time: "7:00 am", description: "Avena con plátano y semillas de chía" },
-    { name: "Media mañana", time: "10:00 am", description: "Yogur natural con granola", isPortable: true },
-    { name: "Almuerzo", time: "12:00 pm", description: "Sándwich de pollo con pan integral, lechuga y tomate", isPortable: true },
-    { name: "Merienda", time: "4:00 pm", description: "Batido de espinacas y plátano" },
-    { name: "Cena", time: "7:00 pm", description: "Tacos de pollo con tortillas de maíz, repollo y salsa de yogur" },
+    {
+      name: "Desayuno",
+      time: "6:15 am",
+      description:
+        "Licuado de avena (1 taza leche, ½ plátano, 3 cucharadas avena, 1 cucharadita miel)",
+    },
+    {
+      name: "Refrigerio",
+      time: "9:45 am",
+      description: "1 manzana + 10 almendras",
+      isPortable: true,
+    },
+    {
+      name: "Mini-comida escuela",
+      time: "12:45 pm",
+      description: "Sándwich pequeño de atún preparado en casa",
+      isPortable: true,
+    },
+    {
+      name: "Comida completa",
+      time: "4:30 pm",
+      description: "Burrito de frijoles con queso bajo en grasa y verduras",
+    },
+    {
+      name: "Cena",
+      time: "7:30 pm",
+      description: "Huevo revuelto con nopales y tortilla de maíz",
+    },
   ],
   tuesday: [
-    { name: "Desayuno", time: "7:00 am", description: "Huevos revueltos con espinacas y tomate" },
-    { name: "Media mañana", time: "10:00 am", description: "Manzana con almendras", isPortable: true },
-    { name: "Almuerzo", time: "1:00 pm", description: "Ensalada de frijoles con maíz, tomate, cebolla y cilantro" },
-    { name: "Merienda", time: "4:00 pm", description: "Yogur natural con fresas" },
-    { name: "Cena", time: "7:00 pm", description: "Pollo con limón, quinoa y ensalada de espinacas" },
+    {
+      name: "Desayuno",
+      time: "6:15 am",
+      description: "Tostada de aguacate con huevo cocido",
+    },
+    {
+      name: "Refrigerio",
+      time: "9:45 am",
+      description: "Yogur natural con fruta picada",
+      isPortable: true,
+    },
+    {
+      name: "Comida",
+      time: "12:00 pm",
+      description: "Wrap de pollo con verduras y aguacate",
+      isPortable: false,
+    },
+    {
+      name: "Cena",
+      time: "7:30 pm",
+      description: "Arroz con verduras y pollo desmenuzado",
+    },
   ],
   wednesday: [
-    { name: "Desayuno", time: "7:00 am", description: "Avena con manzana y canela" },
-    { name: "Media mañana", time: "10:00 am", description: "Yogur natural con granola", isPortable: true },
-    { name: "Almuerzo", time: "12:00 pm", description: "Wrap de pollo con lechuga, tomate y aguacate", isPortable: true },
-    { name: "Merienda", time: "4:00 pm", description: "Batido de espinacas y plátano" },
-    { name: "Cena", time: "7:00 pm", description: "Pescado al vapor con arroz integral y brócoli" },
+    {
+      name: "Desayuno",
+      time: "6:15 am",
+      description: "Quesadilla de huevo con espinacas",
+    },
+    {
+      name: "Refrigerio",
+      time: "9:45 am",
+      description: "Plátano + puñado de nueces mixtas",
+      isPortable: true,
+    },
+    {
+      name: "Mini-comida escuela",
+      time: "12:45 pm",
+      description: "Wrap pequeño de hummus con verduras",
+      isPortable: true,
+    },
+    {
+      name: "Comida completa",
+      time: "4:30 pm",
+      description: "Sopa de lentejas con verduras",
+    },
+    {
+      name: "Cena",
+      time: "7:30 pm",
+      description: "Tacos de frijoles con aguacate y salsa casera",
+    },
   ],
   thursday: [
-    { name: "Desayuno", time: "7:00 am", description: "Huevos revueltos con espinacas y tomate" },
+    {
+      name: "Desayuno",
+      time: "6:15 am",
+      description: "Licuado de plátano con avena y canela",
+    },
   ],
 };
 
 export const fatherMealPlan = {
   monday: [
-    { name: "Desayuno", time: "7:00 am", description: "Avena con manzana y almendras" },
-    { name: "Media mañana", time: "10:00 am", description: "Pera con almendras" },
-    { name: "Almuerzo", time: "1:00 pm", description: "Sopa de lentejas con vegetales" },
-    { name: "Merienda", time: "4:00 pm", description: "Yogur natural con fresas" },
-    { name: "Cena", time: "7:00 pm", description: "Pollo con limón, quinoa y ensalada de espinacas" },
-    { name: "Refrigerio nocturno", time: "9:00 pm", description: "Leche tibia con canela" },
+    {
+      name: "Desayuno",
+      time: "7:30 am",
+      description: "Avena con canela, manzana picada y nueces",
+    },
+    {
+      name: "Refrigerio",
+      time: "10:30 am",
+      description: "Jícama picada con limón",
+    },
+    {
+      name: "Comida",
+      time: "1:30 pm",
+      description: "Sopa de verduras + pollo asado con ensalada",
+    },
+    {
+      name: "Refrigerio",
+      time: "4:30 pm",
+      description: "1 naranja + 6 nueces",
+    },
+    {
+      name: "Cena",
+      time: "7:00 pm",
+      description: "Quesadilla de hongos con queso bajo en grasa",
+    },
   ],
   tuesday: [
-    { name: "Desayuno", time: "7:00 am", description: "Huevos revueltos con espinacas y tomate" },
-    { name: "Media mañana", time: "10:00 am", description: "Manzana con almendras" },
-    { name: "Almuerzo", time: "1:00 pm", description: "Ensalada de frijoles con maíz, tomate, cebolla y cilantro" },
-    { name: "Merienda", time: "4:00 pm", description: "Yogur natural con fresas" },
-    { name: "Cena", time: "7:00 pm", description: "Pescado al vapor con arroz integral y brócoli" },
-    { name: "Refrigerio nocturno", time: "9:00 pm", description: "Té de manzanilla" },
+    {
+      name: "Desayuno",
+      time: "7:30 am",
+      description: "Huevo revuelto con nopales y tortilla integral",
+    },
+    {
+      name: "Refrigerio",
+      time: "10:30 am",
+      description: "Pepitas de calabaza con arándanos secos",
+    },
+    {
+      name: "Comida",
+      time: "1:30 pm",
+      description: "Caldo de pollo con verduras + ensalada de lentejas",
+    },
+    {
+      name: "Refrigerio",
+      time: "4:30 pm",
+      description: "Zanahoria y apio con hummus",
+    },
+    {
+      name: "Cena",
+      time: "7:00 pm",
+      description: "Ensalada de atún con verduras",
+    },
   ],
   wednesday: [
-    { name: "Desayuno", time: "7:00 am", description: "Avena con plátano y semillas de chía" },
-    { name: "Media mañana", time: "10:00 am", description: "Pera con almendras" },
-    { name: "Almuerzo", time: "1:00 pm", description: "Sopa de vegetales con pollo" },
-    { name: "Merienda", time: "4:00 pm", description: "Yogur natural con granola" },
-    { name: "Cena", time: "7:00 pm", description: "Tacos de pollo con tortillas de maíz, repollo y salsa de yogur" },
-    { name: "Refrigerio nocturno", time: "9:00 pm", description: "Leche tibia con canela" },
+    {
+      name: "Desayuno",
+      time: "7:30 am",
+      description: "Licuado verde (espinaca, apio, manzana, limón)",
+    },
+    {
+      name: "Refrigerio",
+      time: "10:30 am",
+      description: "Huevo duro + jitomate cherry",
+    },
+    {
+      name: "Comida",
+      time: "1:30 pm",
+      description: "Pollo a la mexicana con arroz y verduras",
+    },
+    {
+      name: "Refrigerio",
+      time: "4:30 pm",
+      description: "Manzana con canela",
+    },
+    {
+      name: "Cena",
+      time: "7:00 pm",
+      description: "Sopa de verduras con calabacitas",
+    },
   ],
   thursday: [
-    { name: "Desayuno", time: "7:00 am", description: "Huevos revueltos con espinacas y tomate" },
+    {
+      name: "Desayuno",
+      time: "7:30 am",
+      description: "Avena con manzana y canela",
+    },
   ],
 };
 
 // Recipes
 export const recipes = [
   {
-    title: "Avena con frutas y semillas",
-    preparation: "Domingo, 6:30 pm (para toda la semana)",
-    prerequisite: "Tener una olla y agua disponible",
+    title: "Licuado de Avena",
+    preparation: "5 minutos",
+    prerequisite: "Tener todos los ingredientes listos",
     steps: [
-      { text: "Hierve 4 tazas de agua en una olla." },
-      { text: "Agrega 2 tazas de avena, cocina a fuego bajo 5 minutos, revolviendo." },
-      { text: "Guarda en un recipiente. Cada mañana, calienta ½ taza por persona en una olla (2 minutos)." },
-      { text: "Richard: ½ plátano en rodajas y 1 cucharada de semillas de chía." },
-      { text: "Padre: ½ manzana picada y 5 almendras." },
+      { text: "Corta el plátano en trozos" },
+      { text: "Coloca todos los ingredientes en la licuadora" },
+      { text: "Licúa por 1 minuto hasta que esté suave" },
+      { text: "Sirve inmediatamente" },
     ],
   },
   {
-    title: "Sándwich de pollo",
-    preparation: "Domingo, 7:00 pm (para lunes)",
-    prerequisite: "Pollo hervido y desmenuzado listo",
+    title: "Sándwich de Atún",
+    preparation: "10 minutos",
+    prerequisite: "Tener atún en lata",
     steps: [
-      { text: "Hierve 2 pechugas de pollo (20 minutos), desmenúzalas." },
-      { text: "Tuesta ligeramente 2 rebanadas de pan integral en una sartén (1 minuto por lado)." },
-      { text: "Unta un poco de mayonesa light (opcional), agrega pollo, lechuga y tomate." },
-      { text: "Envuelve en aluminio para llevar." },
+      { text: "Escurre bien el atún" },
+      { text: "En un tazón, mezcla el atún con mayonesa, sal y pimienta" },
+      { text: "Lava y seca la lechuga" },
+      { text: "Unta el atún sobre una rebanada de pan" },
+      { text: "Añade lechuga y jitomate" },
+      { text: "Cubre con la otra rebanada de pan" },
+      { text: "Envuelve en papel o guarda en contenedor" },
     ],
   },
   {
-    title: "Wrap de pollo",
-    preparation: "Martes, 7:00 pm (para miércoles)",
-    prerequisite: "Pollo desmenuzado listo",
+    title: "Burrito de Frijoles",
+    preparation: "15 minutos",
+    prerequisite: "Frijoles cocidos",
     steps: [
-      { text: "Usa una tortilla de maíz grande." },
-      { text: "Rellena con pollo desmenuzado, lechuga, tomate y aguacate." },
-      { text: "Envuelve y corta por la mitad para el miércoles." },
+      { text: "Calienta los frijoles en un sartén pequeño" },
+      { text: "Calienta ligeramente la tortilla en comal" },
+      { text: "Extiende los frijoles en el centro de la tortilla" },
+      { text: "Agrega el queso, aguacate, lechuga y salsa" },
+      { text: "Dobla los extremos y enrolla para formar el burrito" },
     ],
   },
   {
-    title: "Sopa de lentejas con vegetales",
-    preparation: "Domingo, 7:30 pm (para lunes y miércoles)",
-    prerequisite: "Lentejas remojadas por 30 minutos",
+    title: "Sopa de Verduras",
+    preparation: "30 minutos (4 porciones)",
+    prerequisite: "Tener todas las verduras limpias y picadas",
     steps: [
-      { text: "Remoja 1 taza de lentejas (30 minutos)." },
-      { text: "Pica 1 cebolla, 2 zanahorias y 2 tallos de apio." },
-      { text: "Saltea la cebolla en una olla con aceite (3 minutos)." },
-      { text: "Agrega zanahorias y apio (5 minutos)." },
-      { text: "Añade lentejas escurridas, 4 tazas de agua y sal. Cocina 30-40 minutos." },
+      { text: "En una olla, calienta el aceite a fuego medio" },
+      { text: "Añade la cebolla y sofríe 2-3 minutos" },
+      { text: "Agrega zanahoria y sofríe 2 minutos más" },
+      { text: "Añade el jitomate y cocina 1 minuto" },
+      { text: "Agrega el agua y las papas, lleva a ebullición" },
+      { text: "Cuando las zanahorias estén suaves, añade las calabacitas" },
+      { text: "Cocina 5 minutos más" },
+      { text: "Sazona con sal y pimienta" },
+      { text: "Sirve con cilantro picado por encima" },
     ],
   },
   {
-    title: "Batido de espinacas y plátano",
-    preparation: "Lunes y miércoles, 3:45 pm",
-    prerequisite: "Tener una licuadora",
+    title: "Pollo Asado Sencillo",
+    preparation: "30 minutos (4 porciones)",
+    prerequisite: "Tener pechugas de pollo",
     steps: [
-      { text: "Licúa 1 taza de agua, 1 puñado de espinacas, 1 plátano y 1 cucharada de miel (30 segundos)." },
-    ],
-  },
-  {
-    title: "Tacos de pollo",
-    preparation: "Lunes y miércoles, 6:30 pm",
-    prerequisite: "Pollo desmenuzado del domingo",
-    steps: [
-      { text: "Calienta 3 tortillas de maíz por persona en una sartén (30 segundos por lado)." },
-      { text: "Rellena con pollo desmenuzado, repollo picado y yogur natural con limón." },
-    ],
-  },
-  {
-    title: "Ensalada de frijoles",
-    preparation: "Domingo, 8:00 pm (para martes)",
-    prerequisite: "Frijoles cocidos listos",
-    steps: [
-      { text: "Cocina 1 taza de frijoles secos (hasta que estén tiernos)." },
-      { text: "Mezcla con ½ taza de maíz, 1 tomate picado, ¼ de cebolla picada y cilantro." },
-      { text: "Adereza con limón y sal. Guarda para el martes." },
-    ],
-  },
-  {
-    title: "Pollo con limón y quinoa",
-    preparation: "Martes, 6:30 pm",
-    prerequisite: "Tener una olla",
-    steps: [
-      { text: "Hierve 1 pechuga de pollo (20 minutos), córtala en trozos." },
-      { text: "Hierve 1 taza de quinoa en 2 tazas de agua (15 minutos)." },
-      { text: "Mezcla el pollo con jugo de limón y sirve sobre la quinoa con espinacas aderezadas." },
-    ],
-  },
-  {
-    title: "Pescado al vapor con arroz y brócoli",
-    preparation: "Miércoles, 6:30 pm",
-    prerequisite: "Tener una vaporera o sustituto (olla con colador)",
-    steps: [
-      { text: "Coloca filetes de pescado en una vaporera con sal y limón (10-15 minutos)." },
-      { text: "Hierve 1 taza de arroz integral (30 minutos)." },
-      { text: "Cuece brócoli al vapor (10 minutos)." },
+      { text: "Mezcla el aceite, jugo de limón, ajo, orégano, sal y pimienta" },
+      { text: "Vierte sobre las pechugas de pollo y deja marinar 15 minutos" },
+      { text: "Calienta un sartén a fuego medio-alto" },
+      {
+        text: "Cocina el pollo 6-7 minutos por cada lado hasta que esté bien cocido",
+      },
+      { text: "Deja reposar 5 minutos antes de servir" },
     ],
   },
 ];
 
 // Shopping list
 export const shoppingList = [
-  "Avena: 1 kg",
-  "Plátanos: 6",
-  "Manzanas: 4",
-  "Peras: 4",
-  "Fresas: 250 g",
-  "Espinacas: 500 g",
-  "Tomates: 10",
-  "Lechuga: 1 cabeza",
-  "Cebollas: 5",
-  "Zanahorias: 10",
-  "Apio: 1 manojo",
-  "Brócoli: 1 cabeza",
-  "Aguacates: 4",
-  "Limones: 6",
-  "Pollo: 1.5 kg",
-  "Pescado: 500 g",
-  "Huevos: 12",
-  "Yogur natural: 1 L",
-  "Granola: 500 g",
-  "Almendras: 200 g",
-  "Semillas de chía: 100 g",
-  "Miel: 200 g",
-  "Pan integral: 1 paquete (10 rebanadas)",
-  "Tortillas de maíz: 20",
-  "Frijoles secos: 500 g",
-  "Lentejas: 500 g",
-  "Arroz integral: 1 kg",
-  "Quinoa: 500 g",
-  "Leche: 1 L",
-  "Canela: 1 frasco",
-  "Té de manzanilla: 1 caja",
-  "Aceite de oliva: 250 ml",
-  "Sal y pimienta: al gusto",
-];
-
-// Quick options for busy days
-export const quickOptions = [
-  "Sándwich de pollo",
-  "Wrap de pollo",
-  "Ensalada de frijoles",
+  // Verduras
+  "Lechuga (1 cabeza)",
+  "Jitomate (8 piezas)",
+  "Cebolla (3 piezas)",
+  "Zanahoria (1 kg)",
+  "Calabacita (4 piezas)",
+  "Nopales (1/2 kg)",
+  "Aguacate (3 piezas)",
+  "Espinacas (1 manojo)",
+  "Apio (1 manojo)",
+  "Jícama (1 pieza mediana)",
+  "Hongos/champiñones (1/4 kg)",
+  "Cilantro (1 manojo)",
+  "Papa (4 piezas medianas)",
+  // Frutas
+  "Plátano (8 piezas)",
+  "Manzana (8 piezas)",
+  "Naranja (6 piezas)",
+  "Limón (10 piezas)",
+  // Proteínas
+  "Pollo pechuga (1 kg)",
+  "Huevo (1 docena)",
+  "Atún en agua (4 latas pequeñas)",
+  "Frijoles negros (1/2 kg)",
+  "Lentejas (1/4 kg)",
+  // Lácteos
+  "Leche (1 litro)",
+  "Yogur natural (500g)",
+  "Queso bajo en grasa (200g)",
+  // Granos y cereales
+  "Avena (500g)",
+  "Arroz (500g)",
+  "Tortillas de maíz (1 paquete)",
+  "Tortillas de harina (1 paquete)",
+  "Pan integral (1 paquete)",
+  // Frutos secos
+  "Almendras (100g)",
+  "Nueces (100g)",
+  "Pepitas de calabaza (100g)",
+  "Mezcla de frutos secos (100g)",
+  // Otros
+  "Aceite de oliva (1 botella pequeña)",
+  "Miel (1 frasco pequeño)",
+  "Canela en polvo",
+  "Orégano seco",
+  "Mayonesa light (1 frasco pequeño)",
+  "Garbanzos (1/4 kg) para hummus",
 ];
 
 // Sleep improvement tips
 export const sleepTips = [
-  "Evita café o té después de las 3:00 pm.",
-  "Acuéstate a la misma hora cada noche (ej. 10:00 pm).",
-  "Lee o escucha música suave antes de dormir (evita pantallas).",
-  "Usa cortinas oscuras en la habitación.",
-  "Prueba un baño tibio antes de acostarte.",
-  "Bebe leche tibia con canela o té de manzanilla a las 9:00 pm.",
+  "Evitar comidas pesadas 2-3 horas antes de dormir",
+  "Cena ligera rica en triptófano (lácteos, plátano, nueces)",
+  "Infusión de manzanilla o tilo después de cenar",
+  "Horario consistente para dormir y despertar",
+  "Reducir exposición a pantallas 1 hora antes de dormir",
+  "Crear ritual relajante: lectura, estiramiento suave o respiración profunda",
+  "Habitación fresca, oscura y silenciosa",
+  "Colchón y almohada cómodos",
+  "Evitar reloj visible",
+  "Evitar cafeína después del mediodía",
+  "Evitar alcohol antes de dormir",
+  "Evitar ejercicio intenso por la noche",
 ];
 
 // Preparation day grouping
 export const prepDays = [
   {
-    day: "Domingo",
+    day: "Domingo (Preparación)",
     tasks: [
-      "6:30 pm: Cocina avena para la semana.",
-      "7:00 pm: Hierve y desmenuza pollo para sándwiches, wraps y sopas.",
-      "7:30 pm: Remoja y cocina frijoles y lentejas.",
-      "8:00 pm: Prepara ensalada de frijoles para el martes.",
+      "Lavar y preparar verduras de la semana",
+      "Cocer 2 tazas de frijoles negros para la semana",
+      "Cocer 4 huevos duros para refrigerios",
+      "Preparar vinagreta básica: 3 partes aceite oliva + 1 parte limón + sal/pimienta",
+      "Preparar agua de frutas natural sin azúcar para la semana",
+      "Organizar contenedores para comidas transportables",
     ],
   },
-  {
-    day: "Lunes",
-    tasks: [
-      "7:00 pm: Prepara sopa de lentejas para lunes y miércoles (padre).",
-    ],
-  },
-  {
-    day: "Martes",
-    tasks: [
-      "7:00 pm: Prepara sopa de vegetales para el miércoles (padre).",
-    ],
-  },
-]; 
+];
+
+// Quick options for busy days
+export const quickOptions = [
+  "Plátano + yogur + nueces",
+  "Pan integral con aguacate",
+  "Huevo duro preparado con anticipación + fruta",
+  "Wrap pequeño preparado la noche anterior",
+  "Frutos secos en contenedor pequeño",
+  "Fruta entera (manzana, plátano)",
+  "Quesadilla de verduras y queso bajo en grasa",
+  "Ensalada de atún con verduras",
+  "Huevo revuelto con verduras y tortilla",
+];

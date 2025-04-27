@@ -9,14 +9,20 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h3 className="text-xl font-bold text-primary">Plan Alimenticio</h3>
-            <p className="text-default-600 text-sm mt-1">Salud y bienestar para ti y tu familia</p>
+            <p className="text-default-600 text-sm mt-1">
+              Salud y bienestar para ti y tu familia
+            </p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-default-600">© {new Date().getFullYear()}</span>
-            <span className="text-primary font-medium">Plan Alimenticio Personalizado</span>
+            <span className="text-default-600">
+              © {new Date().getFullYear()}
+            </span>
+            <span className="text-primary font-medium">
+              Plan Alimenticio Personalizado
+            </span>
           </div>
         </div>
       </div>
     </footer>
   );
-} 
+}

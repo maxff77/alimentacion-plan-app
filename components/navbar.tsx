@@ -1,32 +1,11 @@
 "use client";
 
-import {
-  Navbar as HeroUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
-  NavbarBrand,
-  NavbarItem,
-  NavbarMenuItem,
-} from "@heroui/react";
-import { Button } from "@heroui/react";
 import { Kbd } from "@heroui/react";
 import { Link } from "@heroui/react";
 import { Input } from "@heroui/react";
-import { link as linkStyles } from "@heroui/react";
-import NextLink from "next/link";
-import clsx from "clsx";
 
-import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
+import { SearchIcon } from "@/components/icons";
 
 export const Navbar = () => {
   const searchInput = (
@@ -54,7 +33,7 @@ export const Navbar = () => {
     <header className="py-3 px-6 sticky top-0 z-40 w-full border-b border-primary-200 dark:border-primary-800 bg-background/80 backdrop-blur-md">
       <div className="flex h-full items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center">
+          <Link className="flex items-center" href="/">
             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white font-bold mr-2">
               PA
             </div>

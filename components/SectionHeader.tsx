@@ -15,10 +15,10 @@ export function SectionHeader({ title, subtitle, icon }: SectionHeaderProps) {
         {icon && <div className="text-primary">{icon}</div>}
         <h2 className="text-2xl font-bold relative">
           {title}
-          <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary-500 to-transparent rounded-full"></span>
+          <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary-500 to-transparent rounded-full" />
         </h2>
       </div>
       {subtitle && <p className="text-default-600 mt-2">{subtitle}</p>}
     </div>
   );
-} 
+}

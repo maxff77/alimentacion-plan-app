@@ -37,4 +37,4 @@ export function MealSchedule({ title, items }: ScheduleProps) {
       </ul>
     </div>
   );
-} 
+}
