@@ -1,427 +1,378 @@
 // Schedule data
 export const richardSchedule = [
-  { meal: "Desayuno", time: "6:15-6:30 am", note: "antes de salir" },
-  { meal: "Refrigerio mañana", time: "9:45-10:00 am", note: "entre clases" },
-  {
-    meal: "Comida L/M",
-    time: "12:45-1:00 pm + 4:00-4:30 pm",
-    note: "Snack ligero + comida completa al llegar a casa",
-  },
-  {
-    meal: "Comida Ma/J",
-    time: "12:00-12:30 pm",
-    note: "",
-  },
-  { meal: "Cena", time: "7:30-8:00 pm", note: "" },
+  { meal: "Desayuno Completo de Carga", time: "5:30 am", note: "3 huevos, frijoles, arroz con canela" },
+  { meal: "Snack Relámpago 1", time: "9:30 am", note: "2 huevos duros - 90 segundos entre clases" },
+  { meal: "Snack Relámpago 2", time: "12:00 pm", note: "Power Mix lentejas-atún - 2 minutos portable" },
+  { meal: "Comida Completa", time: "3:20 pm (L/M) o 12:45 pm (Ma/J)", note: "Según día escolar" },
+  { meal: "Cena de Reconstrucción", time: "7:00 pm", note: "150g pollo o 3 huevos - Meta: 145g proteína/día" },
 ];
 
-export const fatherSchedule = [
-  { meal: "Medicación", time: "al despertar", note: "en ayunas" },
-  {
-    meal: "Desayuno",
-    time: "7:30-8:00 am",
-    note: "30 min después de medicación",
-  },
-  { meal: "Refrigerio mañana", time: "10:30-11:00 am", note: "" },
-  { meal: "Comida", time: "1:30-2:00 pm", note: "" },
-  { meal: "Refrigerio tarde", time: "4:30-5:00 pm", note: "" },
-  {
-    meal: "Cena ligera",
-    time: "7:00-7:30 pm",
-    note: "mínimo 2 horas antes de dormir",
-  },
+export const pedroSchedule = [
+  { meal: "Desayuno Pre-Medicación", time: "6:00 am", note: "1 huevo + lentejas + 1/3 taza arroz (fibra primero)" },
+  { meal: "Almuerzo Antiinflamatorio", time: "12:00 pm", note: "Pollo 100g + frijoles blancos (sin pepino)" },
+  { meal: "Merienda Ligera", time: "4:00 pm", note: "Ensalada frijoles negros + 1 huevo" },
+  { meal: "Cena Temprana", time: "7:00 pm", note: "Atún o pollo + arroz-lentejas (3h antes dormir)" },
 ];
 
 // Weekly meal plans
 export const richardMealPlan = {
   monday: [
     {
-      name: "Desayuno",
-      time: "6:15 am",
-      description:
-        "Licuado de avena (1 taza leche, ½ plátano, 3 cucharadas avena, 1 cucharadita miel)",
+      name: "Desayuno de Carga",
+      time: "5:30 am",
+      description: "3 huevos revueltos con 2 cdas frijoles negros machacados, 3/4 taza arroz blanco con canela, 1 cda aceite oliva",
+      isPortable: false,
     },
     {
-      name: "Refrigerio",
-      time: "9:45 am",
-      description: "1 manzana + 10 almendras",
+      name: "Snack Relámpago 1",
+      time: "9:30 am",
+      description: "2 huevos duros pre-pelados en bolsa ziploc con sal/pimienta - Técnica: 15 masticadas por bocado",
       isPortable: true,
     },
     {
-      name: "Mini-comida escuela",
-      time: "12:45 pm",
-      description: "Sándwich pequeño de atún preparado en casa",
+      name: "Snack Relámpago 2",
+      time: "12:00 pm",
+      description: "Power Mix: 150g lentejas cocidas + 80g atún en bolsa, pre-mezclado con aceite y limón",
       isPortable: true,
     },
     {
-      name: "Comida completa",
-      time: "4:30 pm",
-      description: "Burrito de frijoles con queso bajo en grasa y verduras",
+      name: "Comida de Recuperación",
+      time: "3:20 pm",
+      description: "Pollo frío pre-cortado (100g) con frijoles blancos (200g) - 2 vasos agua con limón",
+      isPortable: false,
     },
     {
-      name: "Cena",
-      time: "7:30 pm",
-      description: "Huevo revuelto con nopales y tortilla de maíz",
+      name: "Cena de Reconstrucción",
+      time: "7:00 pm",
+      description: "Pollo al sartén (150g) con 1 taza mezcla arroz-lentejas y ensalada de frijoles",
+      isPortable: false,
     },
   ],
   tuesday: [
     {
-      name: "Desayuno",
-      time: "6:15 am",
-      description: "Tostada de aguacate con huevo cocido",
-    },
-    {
-      name: "Refrigerio",
-      time: "9:45 am",
-      description: "Yogur natural con fruta picada",
-      isPortable: true,
-    },
-    {
-      name: "Comida",
-      time: "12:00 pm",
-      description: "Wrap de pollo con verduras y aguacate",
+      name: "Desayuno de Carga",
+      time: "5:30 am",
+      description: "3 huevos revueltos con espinacas, 3/4 taza arroz con canela, 1 cda aceite oliva",
       isPortable: false,
     },
     {
-      name: "Cena",
-      time: "7:30 pm",
-      description: "Arroz con verduras y pollo desmenuzado",
+      name: "Snack Relámpago 1",
+      time: "9:30 am",
+      description: "2 huevos duros pre-pelados con sal/pimienta - Masticación bilateral: 5 derecha, 5 izquierda, 5 centro",
+      isPortable: true,
+    },
+    {
+      name: "Almuerzo Completo",
+      time: "12:45 pm",
+      description: "Plato arroz (1 taza) + lentejas (1 taza) + pollo (120g) - Masticación consciente 20 min",
+      isPortable: false,
+    },
+    {
+      name: "Cena de Reconstrucción",
+      time: "7:00 pm",
+      description: "3 huevos o pollo (150g) con mezcla arroz-lentejas y ensalada frijoles",
+      isPortable: false,
     },
   ],
   wednesday: [
     {
-      name: "Desayuno",
-      time: "6:15 am",
-      description: "Quesadilla de huevo con espinacas",
+      name: "Desayuno de Carga",
+      time: "5:30 am",
+      description: "3 huevos con frijoles negros machacados, 3/4 taza arroz, aceite oliva",
+      isPortable: false,
     },
     {
-      name: "Refrigerio",
-      time: "9:45 am",
-      description: "Plátano + puñado de nueces mixtas",
+      name: "Snack Relámpago 1",
+      time: "9:30 am",
+      description: "Bombas de Proteína: 2 huevos duros en bolsa - 4 bocados grandes, 15 masticadas c/u",
       isPortable: true,
     },
     {
-      name: "Mini-comida escuela",
-      time: "12:45 pm",
-      description: "Wrap pequeño de hummus con verduras",
+      name: "Snack Relámpago 2",
+      time: "12:00 pm",
+      description: "Power Mix: lentejas al dente (150g) + atún (80g) - Comer con tenedor desechable mientras caminas",
       isPortable: true,
     },
     {
-      name: "Comida completa",
-      time: "4:30 pm",
-      description: "Sopa de lentejas con verduras",
+      name: "Comida de Recuperación",
+      time: "3:20 pm",
+      description: "Pollo desmenuzado (100g) + frijoles blancos (200g) + 2 vasos agua limón",
+      isPortable: false,
     },
     {
-      name: "Cena",
-      time: "7:30 pm",
-      description: "Tacos de frijoles con aguacate y salsa casera",
+      name: "Cena de Reconstrucción",
+      time: "7:00 pm",
+      description: "Pollo fresco (150g) con arroz-lentejas, ensalada simple de frijoles",
+      isPortable: false,
     },
   ],
   thursday: [
     {
-      name: "Desayuno",
-      time: "6:15 am",
-      description: "Licuado de plátano con avena y canela",
+      name: "Desayuno de Carga",
+      time: "5:30 am",
+      description: "3 huevos con frijoles, 3/4 taza arroz con canela, aceite oliva",
+      isPortable: false,
     },
     {
-      name: "Refrigerio",
-      time: "9:45 am",
-      description: "Mix de frutos secos (nueces, almendras, arándanos)",
+      name: "Snack Relámpago 1",
+      time: "9:30 am",
+      description: "2 huevos duros - Técnica: morder con incisivos, masticar con molares",
       isPortable: true,
     },
     {
-      name: "Comida",
+      name: "Almuerzo Completo",
+      time: "12:45 pm",
+      description: "Bowl arroz integral (1 taza) + pollo (120g) + lentejas - 20 min masticación",
+      isPortable: false,
+    },
+    {
+      name: "Cena de Reconstrucción",
+      time: "7:00 pm",
+      description: "Pollo (150g) con arroz-lentejas, ensalada frijoles - Meta proteína 145g/día",
+      isPortable: false,
+    },
+  ],
+  friday: [
+    {
+      name: "Desayuno de Carga",
+      time: "5:30 am",
+      description: "3 huevos revueltos, frijoles negros, arroz con canela",
+      isPortable: false,
+    },
+    {
+      name: "Snack Relámpago 1",
+      time: "9:30 am",
+      description: "2 huevos duros con sal/pimienta - 90 segundos consumo total",
+      isPortable: true,
+    },
+    {
+      name: "Snack Relámpago 2",
       time: "12:00 pm",
-      description: "Bowl de arroz integral con pollo y verduras al vapor",
+      description: "Power Mix final semana: lentejas (150g) + atún (80g) pre-mezclado",
+      isPortable: true,
+    },
+    {
+      name: "Comida de Recuperación",
+      time: "3:20 pm",
+      description: "Pollo (100g) + frijoles blancos (200g) - Hidratación con agua limón",
+      isPortable: false,
+    },
+    {
+      name: "Cena Viernes",
+      time: "7:30 pm",
+      description: "Atún (80g) o pollo (150g) con arroz-lentejas, ensalada verde",
+      isPortable: false,
+    },
+  ],
+  saturday: [
+    {
+      name: "Desayuno Fin de Semana",
+      time: "8:00 am",
+      description: "3 huevos revueltos con espinacas, arroz integral, frijoles",
+      isPortable: false,
+    },
+    {
+      name: "Refrigerio",
+      time: "11:00 am",
+      description: "Ensalada de lentejas con aceite oliva",
+      isPortable: false,
+    },
+    {
+      name: "Comida",
+      time: "2:00 pm",
+      description: "Pollo asado (150g) con arroz, lentejas y ensalada mixta",
       isPortable: false,
     },
     {
       name: "Cena",
       time: "7:30 pm",
-      description: "Sopa de verduras con pasta integral",
-    },
-  ],
-  friday: [
-    {
-      name: "Desayuno",
-      time: "6:15 am",
-      description:
-        "Pan tostado con mantequilla de almendras y plátano en rodajas",
-    },
-    {
-      name: "Refrigerio",
-      time: "9:45 am",
-      description: "Yogurt griego con granola casera",
-      isPortable: true,
-    },
-    {
-      name: "Mini-comida escuela",
-      time: "12:45 pm",
-      description: "Ensalada de quinoa con verduras y pollo",
-      isPortable: true,
-    },
-    {
-      name: "Comida completa",
-      time: "4:30 pm",
-      description: "Pescado a la plancha con verduras asadas",
-    },
-    {
-      name: "Cena",
-      time: "7:30 pm",
-      description: "Quesadillas de tortilla integral con champiñones y queso",
-    },
-  ],
-  saturday: [
-    {
-      name: "Desayuno",
-      time: "8:00 am",
-      description: "Huevos revueltos con espinacas y tostadas integrales",
-    },
-    {
-      name: "Refrigerio",
-      time: "11:00 am",
-      description: "Batido de proteínas con frutas",
-      isPortable: true,
-    },
-    {
-      name: "Comida",
-      time: "2:00 pm",
-      description: "Sandwich de pavo con aguacate y verduras",
-      isPortable: true,
-    },
-    {
-      name: "Cena",
-      time: "7:30 pm",
-      description:
-        "Pasta integral con salsa de tomate casera y albóndigas de pavo",
+      description: "2 huevos con frijoles negros y arroz integral",
+      isPortable: false,
     },
   ],
   sunday: [
     {
-      name: "Desayuno",
+      name: "Desayuno Domingo",
       time: "8:30 am",
-      description: "Hotcakes de avena con miel y frutas",
+      description: "3 huevos con frijoles, arroz con canela",
+      isPortable: false,
     },
     {
       name: "Refrigerio",
       time: "11:30 am",
-      description: "Palitos de zanahoria con hummus",
-      isPortable: true,
+      description: "Ensalada de frijoles blancos con aceite",
+      isPortable: false,
     },
     {
-      name: "Comida",
+      name: "Comida Familiar",
       time: "2:30 pm",
-      description: "Pollo asado con ensalada mixta y arroz integral",
+      description: "Pollo (150g) con arroz, lentejas y ensalada verde",
+      isPortable: false,
     },
     {
       name: "Cena",
       time: "7:30 pm",
-      description: "Sopa de verduras y sandwich pequeño de queso bajo en grasa",
+      description: "Huevos revueltos con espinacas y frijoles",
+      isPortable: false,
     },
   ],
 };
 
-export const fatherMealPlan = {
+export const pedroMealPlan = {
   monday: [
     {
-      name: "Desayuno",
-      time: "7:30 am",
+      name: "Desayuno Pre-Medicación",
+      time: "6:00 am",
       description:
-        "Avena con canela, manzana picada y nueces (2/3 taza avena, 1 manzana pequeña, 6 nueces)",
+        "1 huevo pochado sobre 150g lentejas, 1/3 taza arroz (comer fibra primero, arroz después de 10 min)",
     },
     {
-      name: "Refrigerio",
-      time: "10:30 am",
-      description: "Jícama picada con una pizca de sal (1 taza, en trozos)",
+      name: "Almuerzo Antiinflamatorio",
+      time: "12:00 pm",
+      description: "Pollo al vapor (100g) con frijoles blancos (200g), ensalada lentejas frías con aceite oliva",
     },
     {
-      name: "Comida",
-      time: "1:30 pm",
-      description: "Sopa de verduras + pollo asado con ensalada (sin jitomate)",
+      name: "Merienda Ligera",
+      time: "4:00 pm",
+      description: "Ensalada de frijoles negros con 1 huevo duro (mejora función hepática)",
     },
     {
-      name: "Refrigerio",
-      time: "4:30 pm",
-      description: "1 pera + 6 nueces",
-    },
-    {
-      name: "Cena",
+      name: "Cena Temprana",
       time: "7:00 pm",
       description:
-        "Quesadilla de hongos con queso bajo en grasa (2 tortillas, 1/4 taza hongos, 30g queso)",
+        "Atún (80g, solo 1 vez/semana) o pollo (100g) con 1 taza arroz-lentejas",
     },
   ],
   tuesday: [
     {
-      name: "Desayuno",
-      time: "7:30 am",
-      description:
-        "Huevo revuelto con nopales y tortilla integral (2 huevos, 1/2 taza nopales, 1 tortilla)",
+      name: "Desayuno Control Glucémico",
+      time: "6:00 am",
+      description: "1 huevo revuelto con espinacas sobre lentejas (150g), 1/3 taza arroz (10 min después)",
     },
     {
-      name: "Refrigerio",
-      time: "10:30 am",
-      description:
-        "Pepitas de calabaza con arándanos secos (2 cucharadas de cada uno)",
+      name: "Almuerzo Antiinflamatorio",
+      time: "12:00 pm",
+      description: "Pollo (100g) con ensalada lentejas-frijoles blancos, aceite oliva (sin jitomate)",
     },
     {
-      name: "Comida",
-      time: "1:30 pm",
-      description:
-        "Caldo de pollo con verduras + ensalada de lentejas (sin jitomate)",
+      name: "Merienda Hepática",
+      time: "4:00 pm",
+      description: "Frijoles negros (150g) con 1 huevo duro picado - Beneficia función hepática",
     },
     {
-      name: "Refrigerio",
-      time: "4:30 pm",
-      description:
-        "Zanahoria y apio con hummus (1 zanahoria, 2 tallos de apio, 2 cucharadas hummus)",
-    },
-    {
-      name: "Cena",
+      name: "Cena con Triptófano",
       time: "7:00 pm",
-      description: "Ensalada de atún con verduras verdes (sin jitomate)",
+      description: "Pollo (100g) o 2 huevos con arroz-lentejas (1 taza) - Promueve mejor sueño",
     },
   ],
   wednesday: [
     {
-      name: "Desayuno",
-      time: "7:30 am",
-      description:
-        "Licuado suave (espinaca, pera, manzana, avena) (1 taza espinaca, 1/2 pera, 1/2 manzana, 3 cdas avena)",
+      name: "Desayuno Fibra Primero",
+      time: "6:00 am",
+      description: "Lentejas (150g) con 1 huevo pochado, arroz (1/3 taza) después - Control glucémico 73%",
     },
     {
-      name: "Refrigerio",
-      time: "10:30 am",
-      description: "Huevo duro + bastones de pepino (1 huevo, 1/2 pepino)",
+      name: "Almuerzo Sin Acidez",
+      time: "12:00 pm",
+      description: "Pollo vapor (100g), frijoles blancos (200g), ensalada verde (sin pepino ni jitomate)",
     },
     {
-      name: "Comida",
-      time: "1:30 pm",
-      description:
-        "Pollo a la plancha con arroz y verduras al vapor (sin salsas ácidas)",
+      name: "Merienda Antiinflamatoria",
+      time: "4:00 pm",
+      description: "Ensalada frijoles negros con huevo, pizca de cúrcuma - Reduce inflamación",
     },
     {
-      name: "Refrigerio",
-      time: "4:30 pm",
-      description: "Manzana con canela (1 manzana pequeña)",
-    },
-    {
-      name: "Cena",
+      name: "Cena Ligera",
       time: "7:00 pm",
-      description: "Sopa de verduras con calabacitas (sin jitomate)",
+      description: "2 huevos con lentejas (200g) o pollo (100g) con arroz integral (1/2 taza)",
     },
   ],
   thursday: [
     {
-      name: "Desayuno",
-      time: "7:30 am",
-      description:
-        "Avena con manzana y canela (2/3 taza avena, 1 manzana pequeña)",
+      name: "Desayuno Control",
+      time: "6:00 am",
+      description: "Lentejas (150g) + 1 huevo, arroz (1/3 taza) después de 10 min",
     },
     {
-      name: "Refrigerio",
-      time: "10:30 am",
-      description:
-        "Galletas de arroz con queso bajo en grasa (3 galletas, 30g queso)",
+      name: "Almuerzo",
+      time: "12:00 pm",
+      description: "Pollo (100g) con frijoles blancos, sin salsas ácidas",
     },
     {
-      name: "Comida",
-      time: "1:30 pm",
-      description:
-        "Pechuga de pollo al horno con pure de papa y verduras (sin salsa)",
-    },
-    {
-      name: "Refrigerio",
-      time: "4:30 pm",
-      description: "Pera en rodajas con canela (1 pera mediana)",
+      name: "Merienda",
+      time: "4:00 pm",
+      description: "Ensalada frijoles negros con huevo - Control hígado graso",
     },
     {
       name: "Cena",
       time: "7:00 pm",
-      description: "Tortilla española con espinacas (2 huevos, sin cebolla)",
+      description: "Pollo (100g) con arroz-lentejas - Triptófano para sueño",
     },
   ],
   friday: [
     {
       name: "Desayuno",
-      time: "7:30 am",
-      description: "Panqué de plátano sin gluten casero con té de manzanilla",
+      time: "6:00 am",
+      description: "1 huevo con lentejas, arroz mínimo - Control glucémico",
     },
     {
-      name: "Refrigerio",
-      time: "10:30 am",
-      description: "Melón picado (1 taza) con semillas de chía (1 cucharadita)",
+      name: "Almuerzo",
+      time: "12:00 pm",
+      description: "Atún (80g, única vez semanal) con ensalada lentejas",
     },
     {
-      name: "Comida",
-      time: "1:30 pm",
-      description:
-        "Pescado blanco al vapor con arroz integral y calabacitas (sin limón)",
-    },
-    {
-      name: "Refrigerio",
-      time: "4:30 pm",
-      description: "Galletas de avena caseras (2) con infusión de jengibre",
+      name: "Merienda",
+      time: "4:00 pm",
+      description: "Frijoles negros con verduras - Sin acidez",
     },
     {
       name: "Cena",
       time: "7:00 pm",
-      description: "Sopa de papa con verduras verdes (sin jitomate)",
+      description: "2 huevos con lentejas y verduras al vapor",
     },
   ],
   saturday: [
     {
       name: "Desayuno",
       time: "8:00 am",
-      description: "Yogurt natural con avena y plátano (sin frutas ácidas)",
+      description: "Huevo pochado con lentejas, arroz mínimo",
     },
     {
       name: "Refrigerio",
       time: "11:00 am",
-      description: "Bastones de apio con queso cottage bajo en grasa",
+      description: "Ensalada de frijoles con aceite oliva",
     },
     {
       name: "Comida",
-      time: "1:30 pm",
-      description: "Pollo a las hierbas con arroz blanco y verduras al vapor",
-    },
-    {
-      name: "Refrigerio",
-      time: "4:30 pm",
-      description: "Compota de manzana casera sin azúcar",
+      time: "2:00 pm",
+      description: "Pollo (100g) con arroz integral y verduras",
     },
     {
       name: "Cena",
       time: "7:00 pm",
-      description: "Crema de calabaza (sin cebolla ni ajo)",
+      description: "Ensalada de lentejas con huevo duro",
     },
   ],
   sunday: [
     {
       name: "Desayuno",
       time: "8:00 am",
-      description: "Tostadas de pan integral con aguacate y huevo cocido",
+      description: "2 huevos con frijoles negros, arroz mínimo",
     },
     {
       name: "Refrigerio",
       time: "11:00 am",
-      description: "Pera y 7 almendras",
+      description: "Lentejas con verduras",
     },
     {
       name: "Comida",
       time: "2:00 pm",
-      description: "Pechuga de pavo a la plancha con puré de camote y brócoli",
-    },
-    {
-      name: "Refrigerio",
-      time: "4:30 pm",
-      description: "Gelatina sin azúcar con frutas no ácidas",
+      description: "Pollo (100g) con ensalada mixta y lentejas",
     },
     {
       name: "Cena",
       time: "7:00 pm",
-      description:
-        "Ensalada de pollo con lechuga, aguacate y pepino (aderezo suave)",
+      description: "Huevo con frijoles blancos - 3h antes de dormir",
     },
   ],
 };
@@ -429,856 +380,279 @@ export const fatherMealPlan = {
 // Recipes
 export const recipes = [
   {
-    title: "Licuado de Avena",
-    preparation: "5 minutos",
-    prerequisite: "Tener todos los ingredientes listos",
+    title: "Batch Cooking: 42 Huevos Semanales",
+    preparation: "30 minutos para la semana",
+    prerequisite: "Olla grande, contenedores para almacenamiento",
     ingredients: [
-      "1 taza de leche",
-      "½ plátano maduro",
-      "3 cucharadas de avena",
-      "1 cucharadita de miel",
-      "Pizca de canela (opcional)",
+      "42 huevos frescos",
+      "Agua suficiente para cubrir",
+      "Sal marina",
+      "Hielo para baño frío",
+      "Contenedores herméticos para almacenamiento",
     ],
     steps: [
-      { text: "Corta el ½ plátano en trozos pequeños" },
-      {
-        text: "Coloca la leche, el plátano, la avena y la miel en la licuadora",
-      },
-      { text: "Licúa por 1 minuto hasta que esté suave" },
-      {
-        text: "Sirve inmediatamente en un vaso (rinde 1 porción de aproximadamente 300ml)",
-      },
+      { text: "Hervir agua en olla grande con pizca de sal" },
+      { text: "Cocinar huevos en tandas de 14 unidades por exactamente 8 minutos" },
+      { text: "Transferir inmediatamente a baño de hielo por 3 minutos" },
+      { text: "Pelar todos los huevos bajo agua fría" },
+      { text: "Almacenar en contenedores: 6 por día para Richard, 1-2 por día para Pedro" },
+      { text: "Refrigerar hasta 5 días, etiquetar fechas" },
     ],
+    note: "Richard: 6 diarios para desarrollo muscular y mandibular. Pedro: 1-2 diarios para control glucémico.",
   },
   {
-    title: "Sándwich de Atún",
-    preparation: "10 minutos",
-    prerequisite: "Tener atún en lata",
+    title: "Pollo Batch: 2kg Semanales",
+    preparation: "45 minutos para la semana",
+    prerequisite: "2kg pechuga de pollo, contenedores herméticos",
     ingredients: [
-      "1 lata pequeña de atún en agua (85g), escurrida",
-      "1 cucharada de mayonesa light",
-      "2 rebanadas de pan integral",
-      "1 hoja de lechuga, lavada y seca",
-      "2 rodajas de jitomate (omitir para versión anti-reflujo)",
-      "Sal y pimienta al gusto",
+      "2kg pechuga de pollo sin piel",
+      "1 cucharada cúrcuma en polvo",
+      "1 cucharada jengibre fresco rallado",
+      "4 dientes de ajo picados",
+      "2 cucharadas aceite de oliva",
+      "Sal marina al gusto",
     ],
     steps: [
-      {
-        text: "Escurre bien el atún presionando con un tenedor contra el colador",
-      },
-      {
-        text: "En un tazón, mezcla el atún con la mayonesa, una pizca de sal y pimienta",
-      },
-      { text: "Lava y seca la lechuga, córtala del tamaño del pan" },
-      { text: "Unta el atún sobre una rebanada de pan" },
-      { text: "Añade la lechuga y el jitomate (si lo usas)" },
-      { text: "Cubre con la otra rebanada de pan" },
-      {
-        text: "Corta el sándwich por la mitad y envuelve en papel o guarda en contenedor",
-      },
+      { text: "Marinar pollo 20 min con cúrcuma, jengibre, ajo y aceite" },
+      { text: "Hornear a 180°C por 35 minutos hasta 75°C interno" },
+      { text: "Enfriar completamente antes de procesar" },
+      { text: "Para Richard: cortar en cubos de 2cm (masticación intensa)" },
+      { text: "Para Pedro: desmenuzar finamente (digestión fácil)" },
+      { text: "Porcionar en contenedores de 100g cada uno" },
+      { text: "Refrigerar hasta 4 días, congelar excedente" },
     ],
+    note: "Texturas diferenciadas: cubos para fortalecer mandíbula de Richard, desmenuzado para digestión suave de Pedro. Especias antiinflamatorias.",
   },
   {
-    title: "Burrito de Frijoles",
+    title: "Lentejas Base Antiinflamatorias",
+    preparation: "40 minutos (rinde 8 porciones)",
+    prerequisite: "500g lentejas secas",
+    ingredients: [
+      "500g lentejas verdes secas",
+      "1 cucharada cúrcuma en polvo",
+      "2 cucharadas jengibre fresco rallado",
+      "6 dientes de ajo enteros",
+      "1 cebolla mediana",
+      "2 cucharadas aceite de oliva",
+      "Sal marina (agregar al final)",
+    ],
+    steps: [
+      { text: "Remojar lentejas 2 horas, escurrir y enjuagar" },
+      { text: "Saltear cebolla y ajo en aceite hasta dorar" },
+      { text: "Agregar cúrcuma y jengibre, cocinar 1 minuto" },
+      { text: "Añadir lentejas, cubrir con agua fría" },
+      { text: "Cocinar 25-30 min hasta textura al dente para Richard, suave para Pedro" },
+      { text: "Agregar sal solo al final de cocción" },
+      { text: "Dividir en porciones de 150g, refrigerar hasta 5 días" },
+    ],
+    note: "Alto contenido proteico (18g por porción), bajo índice glucémico. Especias antiinflamatorias reducen artritis en Pedro.",
+  },
+  {
+    title: "Arroz Integral Control Glucémico",
+    preparation: "35 minutos",
+    prerequisite: "Arroz integral de grano largo",
+    ingredients: [
+      "2 tazas arroz integral grano largo",
+      "1/2 cucharadita cúrcuma",
+      "1 cucharada aceite de coco",
+      "3 1/2 tazas agua fría",
+      "1 cucharadita sal marina",
+    ],
+    steps: [
+      { text: "Tostar arroz seco en sartén 2-3 minutos hasta aromático" },
+      { text: "Añadir aceite de coco y cúrcuma, mezclar bien" },
+      { text: "Agregar agua fría de una vez, llevar a ebullición" },
+      { text: "Reducir fuego al mínimo, tapar herméticamente" },
+      { text: "Cocinar 25 minutos sin destapar" },
+      { text: "Reposar 10 minutos antes de servir" },
+      { text: "Porcionar: Richard 1/2 taza, Pedro máximo 1/4 taza" },
+    ],
+    note: "Pedro: máximo 1/4 taza por comida para control glucémico. Richard: 1/2 taza para energía sostenida. Índice glucémico reducido por método de cocción.",
+  },
+  {
+    title: "Ensalada Desarrollo Mandibular",
     preparation: "15 minutos",
-    prerequisite: "Frijoles cocidos",
+    prerequisite: "Verduras crudas frescas",
     ingredients: [
-      "1/2 taza de frijoles negros cocidos, ligeramente machacados",
-      "1 tortilla grande de harina",
-      "30g de queso bajo en grasa, rallado",
-      "1/4 de aguacate, en rebanadas",
-      "1/4 taza de lechuga, finamente picada",
-      "2 cucharadas de salsa mexicana (omitir para versión anti-reflujo)",
-      "1/2 cucharadita de aceite para calentar los frijoles",
+      "2 zanahorias grandes crudas",
+      "3 tallos de apio",
+      "1 jícama mediana",
+      "2 pepinos",
+      "2 cucharadas aceite de oliva",
+      "1 cucharada vinagre de manzana",
+      "Sal marina y hierbas al gusto",
     ],
     steps: [
-      {
-        text: "Calienta los frijoles en un sartén pequeño con 1/2 cucharadita de aceite, a fuego medio por 3-4 minutos",
-      },
-      {
-        text: "Mientras tanto, calienta ligeramente la tortilla en un comal seco, 10 segundos por lado",
-      },
-      {
-        text: "Extiende los frijoles calientes en el centro de la tortilla, dejando 2-3 cm libres en los bordes",
-      },
-      {
-        text: "Agrega el queso rallado sobre los frijoles para que se derrita con el calor",
-      },
-      {
-        text: "Añade las rebanadas de aguacate, la lechuga y la salsa (si la usas)",
-      },
-      {
-        text: "Dobla los extremos hacia el centro y luego enrolla desde un lado para formar el burrito",
-      },
-      {
-        text: "Puedes envolverlo en papel aluminio para mantenerlo cerrado y caliente",
-      },
+      { text: "Cortar zanahoria en bastones gruesos de 1cm" },
+      { text: "Cortar apio en trozos largos y gruesos" },
+      { text: "Pelar y cortar jícama en bastones de 2cm" },
+      { text: "Cortar pepino con piel en rodajas gruesas" },
+      { text: "Mezclar aceite, vinagre y sal para vinagreta" },
+      { text: "Servir verduras separadas con vinagreta al lado" },
+      { text: "Masticar cada trozo mínimo 25 veces" },
     ],
+    note: "Richard: texturas duras específicamente para fortalecer mandíbula y músculos masticatorios. Cortes grandes obligan a masticación intensa.",
   },
   {
-    title: "Tostada de Aguacate con Huevo",
-    preparation: "10 minutos",
-    prerequisite: "Ninguno",
+    title: "Frijoles Negros Estabilizadores",
+    preparation: "2 horas (remojo nocturno requerido)",
+    prerequisite: "500g frijoles negros secos",
     ingredients: [
-      "1 rebanada de pan integral",
-      "1/2 aguacate maduro",
-      "1 huevo",
-      "Pizca de sal y pimienta",
-      "1/4 cucharadita de aceite de oliva (para cocinar el huevo)",
+      "500g frijoles negros secos",
+      "2 hojas de laurel",
+      "1 cucharadita comino molido",
+      "4 dientes de ajo enteros",
+      "1 cebolla grande",
+      "Sal marina (agregar al final)",
     ],
     steps: [
-      {
-        text: "Llena una olla pequeña con agua hasta la mitad y ponla a hervir a fuego medio-alto",
-      },
-      {
-        text: "Cuando el agua esté hirviendo, reduce el fuego a medio y con cuidado coloca el huevo con una cuchara",
-      },
-      {
-        text: "Cocina por 6-7 minutos para un huevo de yema semi-líquida (o 8-9 minutos para yema firme)",
-      },
-      { text: "Mientras tanto, tuesta el pan en un tostador o sartén" },
-      {
-        text: "Corta el aguacate por la mitad, retira el hueso, y saca la pulpa de la mitad con una cuchara",
-      },
-      {
-        text: "Machaca el aguacate con un tenedor y extiéndelo sobre el pan tostado",
-      },
-      {
-        text: "Retira el huevo del agua con una cuchara, enfríalo brevemente bajo el chorro de agua fría, y pela la cáscara",
-      },
-      { text: "Corta el huevo en rodajas y colócalas sobre el aguacate" },
-      { text: "Añade una pizca de sal y pimienta al gusto" },
+      { text: "Remojar frijoles 8 horas o toda la noche" },
+      { text: "Escurrir y enjuagar bien" },
+      { text: "Cubrir con agua fresca, agregar laurel y ajo" },
+      { text: "Cocinar a fuego lento 1.5-2 horas" },
+      { text: "Agregar cebolla y comino últimos 30 minutos" },
+      { text: "Sal únicamente al final de cocción" },
+      { text: "Almacenar en porciones de 200g" },
     ],
+    note: "Fibra soluble ideal para control glucémico de Pedro. Reduce picos de azúcar 40%. Conservar hasta 5 días refrigerado.",
   },
   {
-    title: "Wrap de Pollo",
-    preparation: "15 minutos",
-    prerequisite: "Tener pollo cocido",
-    ingredients: [
-      "1 tortilla grande de harina",
-      "80g de pollo cocido y desmenuzado",
-      "1/4 de aguacate en rebanadas",
-      "1/4 taza de lechuga picada",
-      "1/4 de zanahoria rallada",
-      "1 cucharada de yogur natural (como aderezo)",
-      "Pizca de sal y hierbas al gusto",
-    ],
-    steps: [
-      {
-        text: "Calienta ligeramente la tortilla en un comal o sartén seco, 10 segundos por lado",
-      },
-      {
-        text: "Extiende la cucharada de yogur sobre la tortilla, dejando un borde de 2 cm",
-      },
-      { text: "Coloca la lechuga picada sobre el yogur" },
-      { text: "Agrega el pollo desmenuzado en el centro" },
-      { text: "Añade la zanahoria rallada y las rebanadas de aguacate" },
-      { text: "Sazona con una pizca de sal y hierbas si lo deseas" },
-      { text: "Dobla los extremos hacia adentro y enrolla firmemente" },
-      { text: "Envuelve en papel o plástico si lo vas a transportar" },
-    ],
-  },
-  {
-    title: "Quesadilla de Huevo con Espinacas",
+    title: "Verduras al Vapor con Jengibre",
     preparation: "12 minutos",
-    prerequisite: "Ninguno",
+    prerequisite: "Vaporera o colador de acero",
     ingredients: [
-      "2 tortillas de maíz",
-      "2 huevos",
-      "1/2 taza de espinacas frescas, picadas",
-      "30g de queso bajo en grasa, rallado",
-      "1/2 cucharadita de aceite",
-      "Pizca de sal y pimienta",
+      "2 tazas brócoli en floretes",
+      "2 tazas coliflor en floretes",
+      "3 zanahorias en bastones",
+      "2 cucharadas jengibre fresco rallado",
+      "2 cucharadas aceite de oliva",
+      "Sal marina al gusto",
     ],
     steps: [
-      {
-        text: "En un tazón pequeño, bate los huevos con una pizca de sal y pimienta",
-      },
-      { text: "Lava y pica finamente las espinacas" },
-      { text: "Calienta el aceite en un sartén a fuego medio" },
-      { text: "Vierte los huevos batidos y cocina por 30 segundos" },
-      {
-        text: "Añade las espinacas picadas sobre el huevo y cocina por 1 minuto más",
-      },
-      {
-        text: "Cuando el huevo esté casi cuajado pero aún húmedo, coloca una tortilla encima",
-      },
-      {
-        text: "Con ayuda de una espátula, voltea todo para que la tortilla quede abajo",
-      },
-      { text: "Añade el queso rallado sobre el huevo" },
-      { text: "Coloca la segunda tortilla encima" },
-      { text: "Cocina 30 segundos más y voltea para dorar el otro lado" },
-      { text: "Retira del fuego y corta en triángulos para servir" },
+      { text: "Calentar agua en olla con vaporera" },
+      { text: "Colocar verduras en vaporera cuando hierva" },
+      { text: "Cocinar al vapor exactamente 8-10 minutos" },
+      { text: "Verduras deben quedar firmes al dente" },
+      { text: "Mezclar aceite con jengibre rallado" },
+      { text: "Aliñar verduras calientes con mezcla de jengibre" },
+      { text: "Servir inmediatamente" },
     ],
+    note: "Jengibre antiinflamatorio específico para artritis de Pedro. Textura firme ayuda a masticación de Richard. Conserva máximos nutrientes.",
   },
   {
-    title: "Licuado de Plátano con Avena",
-    preparation: "5 minutos",
-    prerequisite: "Ninguno",
+    title: "Kit Snack de Emergencia Escolar",
+    preparation: "10 minutos (prepara 5 kits)",
+    prerequisite: "Contenedores pequeños portables",
     ingredients: [
-      "1 plátano maduro",
-      "1 taza de leche",
-      "3 cucharadas de avena",
-      "1/4 cucharadita de canela",
-      "1 cucharadita de miel (opcional)",
+      "10 huevos duros pre-cocidos",
+      "50 almendras crudas",
+      "5 manzanas medianas",
+      "5 botellas de agua pequeñas",
+      "Sal marina en sobrecitos",
     ],
     steps: [
-      { text: "Pela el plátano y córtalo en trozos" },
-      { text: "Coloca todos los ingredientes en la licuadora" },
-      { text: "Licúa por 1-2 minutos hasta obtener una consistencia suave" },
-      { text: "Si está muy espeso, puedes añadir un poco más de leche" },
-      { text: "Sirve inmediatamente (rinde 1 porción grande o 2 pequeñas)" },
+      { text: "Colocar 2 huevos duros en cada contenedor" },
+      { text: "Agregar exactamente 10 almendras por kit" },
+      { text: "Incluir 1 manzana lavada en cada kit" },
+      { text: "Adjuntar botella de agua individual" },
+      { text: "Etiquetar con día de la semana" },
+      { text: "Refrigerar hasta momento de consumo" },
+      { text: "Consumir en máximo 90 segundos entre clases" },
     ],
+    note: "Richard: diseñado para consumo ultra-rápido entre clases. 20g proteína, masticación eficiente, hidratación completa. Preparar domingo para toda semana.",
   },
   {
-    title: "Sopa de Verduras",
-    preparation: "30 minutos (4 porciones)",
-    prerequisite: "Tener todas las verduras limpias y picadas",
+    title: "Sopa de Lentejas Antiartrítica",
+    preparation: "45 minutos",
+    prerequisite: "Lentejas cocidas de receta base",
     ingredients: [
-      "1 cucharada de aceite de oliva",
-      "1/2 cebolla mediana, picada (aproximadamente 1/2 taza)",
-      "1 zanahoria grande, en cubos (aproximadamente 1 taza)",
-      "1 papa mediana, en cubos (aproximadamente 1 taza)",
-      "2 calabacitas medianas, en cubos (aproximadamente 2 tazas)",
-      "1 jitomate mediano, picado (omitir para versión anti-reflujo)",
-      "1.5 litros de agua",
-      "1 ramita de cilantro fresco, picado",
-      "Sal y pimienta al gusto",
+      "2 tazas lentejas cocidas base",
+      "1 cucharada cúrcuma fresca rallada",
+      "1 cucharada jengibre fresco",
+      "2 tazas verduras mixtas picadas",
+      "4 tazas caldo de verduras sin sodio",
+      "2 cucharadas aceite de oliva",
     ],
     steps: [
-      { text: "En una olla mediana, calienta el aceite a fuego medio" },
-      {
-        text: "Añade la cebolla picada y sofríe por 2-3 minutos hasta que esté transparente",
-      },
-      { text: "Agrega la zanahoria en cubos y sofríe 2 minutos más" },
-      {
-        text: "Si usas jitomate, añádelo ahora y cocina 1 minuto (omitir para versión anti-reflujo)",
-      },
-      {
-        text: "Agrega el agua y las papas, aumenta el fuego para llevar a ebullición",
-      },
-      {
-        text: "Reduce el fuego a medio-bajo, tapa parcialmente y cocina por 10 minutos",
-      },
-      {
-        text: "Cuando las zanahorias y papas estén suaves al pincharlas, añade las calabacitas",
-      },
-      {
-        text: "Cocina 5 minutos más hasta que todas las verduras estén tiernas",
-      },
-      { text: "Sazona con sal y pimienta al gusto" },
-      {
-        text: "Sirve caliente con cilantro picado por encima (aproximadamente 1.5 tazas por porción)",
-      },
+      { text: "Calentar aceite, sofrer cúrcuma y jengibre 2 minutos" },
+      { text: "Agregar verduras, cocinar 5 minutos" },
+      { text: "Añadir lentejas cocidas y caldo" },
+      { text: "Cocinar a fuego lento 20 minutos" },
+      { text: "Ajustar consistencia con más caldo si necesario" },
+      { text: "Servir tibio, nunca hirviendo" },
+      { text: "Pedro: ideal para cena 3 horas antes de dormir" },
     ],
+    note: "Pedro: cena perfecta 3 horas antes de dormir. Antiinflamatorio potente para artritis. Fácil digestión, no interrumpe sueño.",
   },
   {
-    title: "Pollo Asado Sencillo",
-    preparation: "30 minutos (4 porciones)",
-    prerequisite: "Tener pechugas de pollo descongeladas",
+    title: "Bowl de Proteínas Masticables",
+    preparation: "15 minutos con ingredientes pre-cocidos",
+    prerequisite: "Ingredientes del batch cooking listos",
     ingredients: [
-      "400g de pechuga de pollo (aproximadamente 2 pechugas medianas)",
-      "1 cucharada de aceite de oliva",
-      "1 diente de ajo, finamente picado",
-      "1 cucharadita de orégano seco",
-      "Sal y pimienta al gusto",
-      "Para la versión original: 1 cucharada de jugo de limón (omitir para versión anti-reflujo)",
+      "100g pollo en cubos (del batch)",
+      "1/2 taza lentejas cocidas",
+      "Bastones de zanahoria y apio crudos",
+      "1 huevo duro cortado en cuartos",
+      "Vinagreta de aceite y vinagre",
+      "Sal marina al gusto",
     ],
     steps: [
-      {
-        text: "En un tazón pequeño, mezcla el aceite, el ajo picado, el orégano, sal y pimienta",
-      },
-      {
-        text: "Para la versión original, añade el jugo de limón (omitir para versión anti-reflujo)",
-      },
-      {
-        text: "Coloca las pechugas de pollo en un plato y viértele la mezcla de aceite por ambos lados",
-      },
-      {
-        text: "Deja marinar el pollo por 15 minutos (si tienes prisa, puedes reducir este tiempo)",
-      },
-      {
-        text: "Calienta un sartén a fuego medio-alto hasta que esté bien caliente",
-      },
-      {
-        text: "Coloca las pechugas de pollo en el sartén y cocina por 6-7 minutos del primer lado",
-      },
-      {
-        text: "Voltea las pechugas y cocina por otros 6-7 minutos o hasta que el centro ya no esté rosado",
-      },
-      {
-        text: "Para verificar que esté cocido, corta la parte más gruesa; no debe verse rosado",
-      },
-      {
-        text: "Retira del fuego y deja reposar 5 minutos antes de servir o cortar",
-      },
-      { text: "Porción recomendada: 100g de pollo cocido por persona" },
+      { text: "Colocar lentejas como base del bowl" },
+      { text: "Distribuir cubos de pollo sobre lentejas" },
+      { text: "Agregar verduras crudas en un lado" },
+      { text: "Colocar huevo en cuartos alrededor" },
+      { text: "Rociar con vinagreta" },
+      { text: "Servir a temperatura ambiente" },
+      { text: "Masticar cada componente mínimo 20 veces" },
     ],
-  },
-  {
-    title: "Avena con Manzana y Canela",
-    preparation: "10 minutos",
-    prerequisite: "Ninguno",
-    ingredients: [
-      "2/3 taza de avena",
-      "1 1/3 tazas de agua (o mitad agua, mitad leche para más cremosidad)",
-      "1 manzana pequeña",
-      "1/4 cucharadita de canela",
-      "6 nueces picadas (opcional)",
-      "1 cucharadita de miel (opcional)",
-    ],
-    steps: [
-      { text: "Lava, pela y corta la manzana en cubos pequeños" },
-      {
-        text: "En una olla pequeña, coloca el agua (o la mezcla de agua y leche) y lleva a ebullición",
-      },
-      {
-        text: "Reduce el fuego a medio-bajo y añade la avena, revolviendo ocasionalmente",
-      },
-      { text: "Después de 2 minutos, añade la manzana picada y la canela" },
-      {
-        text: "Cocina por 3-5 minutos más, revolviendo frecuentemente, hasta que la avena esté suave y haya absorbido la mayoría del líquido",
-      },
-      { text: "Si queda muy espeso, puedes añadir un poco más de agua" },
-      { text: "Sirve en un tazón y espolvorea las nueces picadas por encima" },
-      {
-        text: "Si deseas, añade una cucharadita de miel (rinde 1 porción grande)",
-      },
-    ],
-  },
-  {
-    title: "Huevo Revuelto con Nopales",
-    preparation: "15 minutos",
-    prerequisite: "Tener nopales limpios",
-    ingredients: [
-      "2 huevos",
-      "1/2 taza de nopales limpios y picados en tiras",
-      "1/4 de cebolla pequeña, picada finamente",
-      "1/2 cucharadita de aceite",
-      "1 tortilla de maíz",
-      "Pizca de sal y pimienta",
-    ],
-    steps: [
-      {
-        text: "Si los nopales no están pre-cocidos: en una olla pequeña con agua hirviendo, cocina los nopales por 5 minutos, escurre y enjuaga con agua fría",
-      },
-      { text: "En un tazón, bate los huevos con una pizca de sal y pimienta" },
-      { text: "Calienta el aceite en un sartén a fuego medio" },
-      {
-        text: "Añade la cebolla picada y sofríe por 2 minutos hasta que esté transparente",
-      },
-      { text: "Agrega los nopales escurridos y cocina por 2 minutos más" },
-      { text: "Vierte los huevos batidos sobre los nopales" },
-      {
-        text: "Con una espátula, revuelve constantemente hasta que el huevo esté cocido pero aún húmedo (aproximadamente 2 minutos)",
-      },
-      {
-        text: "Mientras tanto, calienta la tortilla en un comal o directamente sobre la llama, volteándola para que no se queme",
-      },
-      { text: "Sirve el huevo con nopales acompañado de la tortilla caliente" },
-    ],
-  },
-  {
-    title: "Ensalada de Atún con Verduras (Versión Anti-Reflujo)",
-    preparation: "10 minutos",
-    prerequisite: "Ninguno",
-    ingredients: [
-      "1 lata de atún en agua (120g drenado)",
-      "1 taza de lechuga romana o verde, lavada y picada",
-      "1/2 taza de zanahoria rallada",
-      "1/4 taza de pepino en cubitos",
-      "1/4 de aguacate en cubitos (opcional)",
-      "1 cucharada de aceite de oliva",
-      "1 cucharadita de vinagre de manzana (menos ácido que otros vinagres)",
-      "Pizca de sal y hierbas al gusto",
-    ],
-    steps: [
-      { text: "Escurre bien el atún y desmenúzalo en un tazón" },
-      { text: "Lava y pica la lechuga en trozos pequeños" },
-      { text: "Ralla la zanahoria y corta el pepino en cubos pequeños" },
-      { text: "Si usas aguacate, córtalo en cubitos pequeños" },
-      {
-        text: "En un tazón pequeño, mezcla el aceite de oliva con el vinagre de manzana y una pizca de sal para hacer el aderezo",
-      },
-      {
-        text: "En un tazón grande, combina la lechuga, zanahoria, pepino y aguacate (si lo usas)",
-      },
-      { text: "Añade el atún desmenuzado por encima" },
-      { text: "Vierte el aderezo y mezcla suavemente todos los ingredientes" },
-      {
-        text: "Sirve inmediatamente o refrigera hasta por 2 horas (rinde 1 porción grande)",
-      },
-    ],
-  },
-  {
-    title: "Sopa de Lentejas con Verduras",
-    preparation: "40 minutos",
-    prerequisite: "Ninguno (las lentejas no requieren remojo previo)",
-    ingredients: [
-      "3/4 taza de lentejas, lavadas y revisadas",
-      "1/2 cebolla mediana, picada",
-      "1 zanahoria mediana, en cubitos",
-      "1 tallo de apio, en cubitos",
-      "1 papa pequeña, en cubitos",
-      "1 diente de ajo, finamente picado",
-      "1 cucharada de aceite de oliva",
-      "4 tazas de agua o caldo de verduras",
-      "1 hoja de laurel (opcional)",
-      "1/2 cucharadita de comino molido",
-      "Sal y pimienta al gusto",
-    ],
-    steps: [
-      {
-        text: "Lava las lentejas bajo agua fría, revisa y retira cualquier piedrita o impureza",
-      },
-      { text: "En una olla mediana, calienta el aceite a fuego medio" },
-      {
-        text: "Añade la cebolla picada y sofríe por 3 minutos hasta que esté transparente",
-      },
-      { text: "Agrega el ajo picado y cocina por 30 segundos más" },
-      {
-        text: "Añade la zanahoria, apio y papa, y cocina por 3 minutos, revolviendo ocasionalmente",
-      },
-      {
-        text: "Agrega las lentejas lavadas y revuelve para mezclar con las verduras",
-      },
-      {
-        text: "Vierte el agua o caldo, añade la hoja de laurel (si la usas) y el comino",
-      },
-      {
-        text: "Lleva a ebullición, luego reduce el fuego a bajo, tapa parcialmente y cocina por 25-30 minutos o hasta que las lentejas estén tiernas",
-      },
-      {
-        text: "Revisa ocasionalmente y añade un poco más de agua si es necesario",
-      },
-      { text: "Sazona con sal y pimienta al gusto" },
-      {
-        text: "Sirve caliente (rinde 4 porciones de aproximadamente 1 taza cada una)",
-      },
-    ],
-  },
-  {
-    title: "Licuado Suave Anti-Reflujo",
-    preparation: "5 minutos",
-    prerequisite: "Ninguno",
-    ingredients: [
-      "1 taza de espinacas frescas",
-      "1/2 pera, sin semillas y cortada en trozos",
-      "1/2 manzana, sin semillas y cortada en trozos",
-      "3 cucharadas de avena",
-      "1 taza de agua o leche de almendra",
-      "1/2 taza de hielo (opcional, para servir más frío)",
-    ],
-    steps: [
-      { text: "Lava bien las espinacas, la pera y la manzana" },
-      { text: "Corta la pera y la manzana en trozos, retirando las semillas" },
-      {
-        text: "Coloca todos los ingredientes en la licuadora, comenzando con el líquido en el fondo",
-      },
-      {
-        text: "Licúa a velocidad alta por 1-2 minutos hasta obtener una consistencia suave",
-      },
-      { text: "Si queda muy espeso, añade un poco más de agua o leche" },
-      {
-        text: "Sirve inmediatamente para aprovechar todos los nutrientes (rinde 1 porción grande)",
-      },
-    ],
-  },
-  {
-    title: "Tacos de Frijoles con Aguacate",
-    preparation: "15 minutos",
-    prerequisite: "Tener frijoles cocidos",
-    ingredients: [
-      "1/2 taza de frijoles negros cocidos",
-      "3 tortillas de maíz",
-      "1/2 aguacate",
-      "1/4 taza de lechuga finamente picada",
-      "2 cucharadas de queso bajo en grasa rallado",
-      "2 cucharadas de salsa casera (opcional, omitir para versión anti-reflujo)",
-      "1/2 cucharadita de aceite",
-    ],
-    steps: [
-      { text: "En un sartén pequeño, calienta el aceite a fuego medio" },
-      {
-        text: "Añade los frijoles y machácalos ligeramente con un tenedor mientras se calientan",
-      },
-      { text: "Cocina por 3-4 minutos, revolviendo ocasionalmente" },
-      {
-        text: "Mientras tanto, calienta las tortillas en un comal o sartén seco, aproximadamente 30 segundos por lado",
-      },
-      {
-        text: "Mantén las tortillas calientes envolviéndolas en un paño limpio",
-      },
-      {
-        text: "Corta el aguacate por la mitad, retira el hueso, y corta la pulpa en rebanadas delgadas",
-      },
-      {
-        text: "Para armar cada taco: extiende aproximadamente 2-3 cucharadas de frijoles sobre cada tortilla",
-      },
-      {
-        text: "Añade la lechuga picada, unas rebanadas de aguacate y espolvorea con queso rallado",
-      },
-      {
-        text: "Si lo deseas y no tienes problemas de reflujo, añade un poco de salsa casera",
-      },
-      { text: "Sirve inmediatamente (rinde 3 tacos)" },
-    ],
+    note: "Richard: 30g proteína total, texturas variadas para desarrollo mandibular. Combina ingredientes batch para máxima eficiencia. Masticación consciente obligatoria.",
   },
 ];
 
 // Shopping list
 export const shoppingList = [
-  // Verduras
-  {
-    id: "v1",
-    item: "Lechuga (1/2 cabeza mediana)",
-    category: "Verduras",
-    purchased: false,
-  },
-  {
-    id: "v2",
-    item: "Espinacas (100g o 1/2 bolsa pequeña)",
-    category: "Verduras",
-    purchased: false,
-  },
-  {
-    id: "v3",
-    item: "Nopales (250g o 3-4 pencas medianas)",
-    category: "Verduras",
-    purchased: false,
-  },
-  {
-    id: "v4",
-    item: "Zanahoria (2 piezas medianas)",
-    category: "Verduras",
-    purchased: false,
-  },
-  {
-    id: "v5",
-    item: "Calabacita (2 piezas medianas)",
-    category: "Verduras",
-    purchased: false,
-  },
-  {
-    id: "v6",
-    item: "Cebolla (1 pieza mediana)",
-    category: "Verduras",
-    purchased: false,
-  },
-  {
-    id: "v7",
-    item: "Ajo (1/2 cabeza o 4-5 dientes)",
-    category: "Verduras",
-    purchased: false,
-  },
-  { id: "v8", item: "Apio (2 tallos)", category: "Verduras", purchased: false },
-  {
-    id: "v9",
-    item: "Papa (2 piezas medianas)",
-    category: "Verduras",
-    purchased: false,
-  },
-  {
-    id: "v10",
-    item: "Pepino (1 pieza)",
-    category: "Verduras",
-    purchased: false,
-  },
-  {
-    id: "v11",
-    item: "Jícama (1/2 pieza mediana)",
-    category: "Verduras",
-    purchased: false,
-  },
-  {
-    id: "v12",
-    item: "Hongos/champiñones (100g)",
-    category: "Verduras",
-    purchased: false,
-  },
-  {
-    id: "v13",
-    item: "Cilantro (1 manojo pequeño)",
-    category: "Verduras",
-    purchased: false,
-  },
-
-  // Frutas
-  {
-    id: "f1",
-    item: "Plátano (4 piezas)",
-    category: "Frutas",
-    purchased: false,
-  },
-  {
-    id: "f2",
-    item: "Manzana (5 piezas pequeñas)",
-    category: "Frutas",
-    purchased: false,
-  },
-  { id: "f3", item: "Pera (2 piezas)", category: "Frutas", purchased: false },
-  {
-    id: "f4",
-    item: "Aguacate (2 piezas)",
-    category: "Frutas",
-    purchased: false,
-  },
-  {
-    id: "f5",
-    item: "Melón (1 pieza pequeña)",
-    category: "Frutas",
-    purchased: false,
-  },
-
   // Proteínas
-  {
-    id: "p1",
-    item: "Huevo (12 piezas)",
-    category: "Proteínas",
-    purchased: false,
-  },
-  {
-    id: "p2",
-    item: "Pollo pechuga (500g)",
-    category: "Proteínas",
-    purchased: false,
-  },
-  {
-    id: "p3",
-    item: "Atún en agua (3 latas pequeñas)",
-    category: "Proteínas",
-    purchased: false,
-  },
-  {
-    id: "p4",
-    item: "Pescado blanco (300g)",
-    category: "Proteínas",
-    purchased: false,
-  },
-  {
-    id: "p5",
-    item: "Pavo pechuga (250g)",
-    category: "Proteínas",
-    purchased: false,
-  },
+  { id: "p1", item: "Huevos (42 unidades - Richard: 25, Pedro: 17)", category: "Proteínas", purchased: false },
+  { id: "p2", item: "Pollo pechugas (2 kg - Richard: 1.2kg, Pedro: 800g)", category: "Proteínas", purchased: false },
+  { id: "p3", item: "Atún en agua (10 latas de 140g)", category: "Proteínas", purchased: false },
 
   // Legumbres
-  {
-    id: "l1",
-    item: "Frijoles negros (1/4 kg secos)",
-    category: "Legumbres",
-    purchased: false,
-  },
-  {
-    id: "l2",
-    item: "Lentejas (1/4 kg)",
-    category: "Legumbres",
-    purchased: false,
-  },
-  {
-    id: "l3",
-    item: "Hummus (1 paquete pequeño o ingredientes para hacerlo)",
-    category: "Legumbres",
-    purchased: false,
-  },
+  { id: "l1", item: "Lentejas verdes secas (600g)", category: "Legumbres", purchased: false },
+  { id: "l2", item: "Frijoles blancos secos (400g)", category: "Legumbres", purchased: false },
+  { id: "l3", item: "Frijoles negros secos (500g)", category: "Legumbres", purchased: false },
 
-  // Lácteos
-  { id: "d1", item: "Leche (1 litro)", category: "Lácteos", purchased: false },
-  {
-    id: "d2",
-    item: "Yogur natural (250g)",
-    category: "Lácteos",
-    purchased: false,
-  },
-  {
-    id: "d3",
-    item: "Queso bajo en grasa (150g)",
-    category: "Lácteos",
-    purchased: false,
-  },
-  {
-    id: "d4",
-    item: "Queso cottage bajo en grasa (1 paquete pequeño)",
-    category: "Lácteos",
-    purchased: false,
-  },
+  // Granos
+  { id: "g1", item: "Arroz blanco (1.2 kg)", category: "Granos", purchased: false },
+  { id: "g2", item: "Arroz integral (300g)", category: "Granos", purchased: false },
 
-  // Granos y cereales
-  {
-    id: "g1",
-    item: "Avena (250g)",
-    category: "Granos y Cereales",
-    purchased: false,
-  },
-  {
-    id: "g2",
-    item: "Arroz integral (250g)",
-    category: "Granos y Cereales",
-    purchased: false,
-  },
-  {
-    id: "g3",
-    item: "Arroz blanco (100g)",
-    category: "Granos y Cereales",
-    purchased: false,
-  },
-  {
-    id: "g4",
-    item: "Tortillas de maíz (10 piezas)",
-    category: "Granos y Cereales",
-    purchased: false,
-  },
-  {
-    id: "g5",
-    item: "Tortillas de harina (5 piezas)",
-    category: "Granos y Cereales",
-    purchased: false,
-  },
-  {
-    id: "g6",
-    item: "Pan integral (1/2 paquete o 6 rebanadas)",
-    category: "Granos y Cereales",
-    purchased: false,
-  },
-  {
-    id: "g7",
-    item: "Pasta integral (1/4 paquete)",
-    category: "Granos y Cereales",
-    purchased: false,
-  },
-  {
-    id: "g8",
-    item: "Galletas de arroz (1 paquete pequeño)",
-    category: "Granos y Cereales",
-    purchased: false,
-  },
-  {
-    id: "g9",
-    item: "Quinoa (100g)",
-    category: "Granos y Cereales",
-    purchased: false,
-  },
+  // Verduras
+  { id: "v1", item: "Espinacas frescas (300g)", category: "Verduras", purchased: false },
+  { id: "v2", item: "Lechuga (1 cabeza)", category: "Verduras", purchased: false },
+  { id: "v3", item: "Cebolla (2 medianas)", category: "Verduras", purchased: false },
+  { id: "v4", item: "Ajo (1 cabeza)", category: "Verduras", purchased: false },
 
-  // Frutos secos y semillas
-  {
-    id: "n1",
-    item: "Almendras (50g)",
-    category: "Frutos Secos",
-    purchased: false,
-  },
-  {
-    id: "n2",
-    item: "Nueces (50g)",
-    category: "Frutos Secos",
-    purchased: false,
-  },
-  {
-    id: "n3",
-    item: "Pepitas de calabaza (30g)",
-    category: "Frutos Secos",
-    purchased: false,
-  },
-  {
-    id: "n4",
-    item: "Mezcla de frutos secos (30g)",
-    category: "Frutos Secos",
-    purchased: false,
-  },
-  {
-    id: "n5",
-    item: "Arándanos secos (30g)",
-    category: "Frutos Secos",
-    purchased: false,
-  },
-  {
-    id: "n6",
-    item: "Semillas de chía (30g)",
-    category: "Frutos Secos",
-    purchased: false,
-  },
+  // Condimentos y Aceites
+  { id: "c1", item: "Aceite de oliva extra virgen (500ml)", category: "Condimentos", purchased: false },
+  { id: "c2", item: "Vinagre blanco (250ml)", category: "Condimentos", purchased: false },
+  { id: "c3", item: "Sal marina (250g)", category: "Condimentos", purchased: false },
+  { id: "c4", item: "Pimienta negra molida (50g)", category: "Condimentos", purchased: false },
+  { id: "c5", item: "Limones (10 unidades)", category: "Condimentos", purchased: false },
 
-  // Condimentos y aceites
-  {
-    id: "c1",
-    item: "Aceite de oliva (60ml o 4 cucharadas)",
-    category: "Condimentos",
-    purchased: false,
-  },
-  {
-    id: "c2",
-    item: "Vinagre de manzana (30ml o 2 cucharadas)",
-    category: "Condimentos",
-    purchased: false,
-  },
-  {
-    id: "c3",
-    item: "Miel (30g o 2 cucharadas)",
-    category: "Condimentos",
-    purchased: false,
-  },
-  {
-    id: "c4",
-    item: "Canela en polvo (5g o 1 cucharadita)",
-    category: "Condimentos",
-    purchased: false,
-  },
-  {
-    id: "c5",
-    item: "Sal (lo que tengas en casa)",
-    category: "Condimentos",
-    purchased: false,
-  },
-  {
-    id: "c6",
-    item: "Pimienta negra molida (lo que tengas en casa)",
-    category: "Condimentos",
-    purchased: false,
-  },
-  {
-    id: "c7",
-    item: "Comino molido (3g o 1/2 cucharadita)",
-    category: "Condimentos",
-    purchased: false,
-  },
-  {
-    id: "c8",
-    item: "Orégano seco (3g o 1/2 cucharadita)",
-    category: "Condimentos",
-    purchased: false,
-  },
+  // Especias
+  { id: "e1", item: "Ajo en polvo (100g)", category: "Especias", purchased: false },
+  { id: "e2", item: "Cebolla en polvo (100g)", category: "Especias", purchased: false },
+  { id: "e3", item: "Orégano seco (50g)", category: "Especias", purchased: false },
+  { id: "e4", item: "Comino molido (50g)", category: "Especias", purchased: false },
+  { id: "e5", item: "Paprika (50g)", category: "Especias", purchased: false },
+  { id: "e6", item: "Canela en polvo (50g)", category: "Especias", purchased: false },
+  { id: "e7", item: "Cúrcuma en polvo (50g)", category: "Especias", purchased: false },
 
-  // Otros
-  {
-    id: "o1",
-    item: "Mayonesa light (30g o 2 cucharadas)",
-    category: "Otros",
-    purchased: false,
-  },
-  {
-    id: "o2",
-    item: "Bicarbonato de sodio (pequeña cantidad)",
-    category: "Otros",
-    purchased: false,
-  },
-  {
-    id: "o3",
-    item: "Té de manzanilla (1 caja pequeña)",
-    category: "Otros",
-    purchased: false,
-  },
-  {
-    id: "o4",
-    item: "Té de jengibre (1 caja pequeña)",
-    category: "Otros",
-    purchased: false,
-  },
-  {
-    id: "o5",
-    item: "Gelatina sin azúcar (1 caja)",
-    category: "Otros",
-    purchased: false,
-  },
+  // Materiales de empaque
+  { id: "m1", item: "Bolsas ziploc tamaño snack (50 unidades)", category: "Materiales", purchased: false },
+  { id: "m2", item: "Bolsas ziploc tamaño sándwich (25 unidades)", category: "Materiales", purchased: false },
+  { id: "m3", item: "Tenedores desechables (25 unidades)", category: "Materiales", purchased: false },
+  { id: "m4", item: "Papel aluminio (1 rollo)", category: "Materiales", purchased: false },
+  { id: "m5", item: "Servilletas (1 paquete)", category: "Materiales", purchased: false },
 ];
 
 // Sleep improvement tips
@@ -1367,3 +741,123 @@ export const quickOptions = [
   "Energía instantánea: Puñado pequeño de frutos secos mixtos (25g)",
   "Opción vegetariana: 3 cucharadas de frijoles ya cocidos + 1 tortilla de maíz",
 ];
+
+// Quick Snack Kits para Richard
+export const quickSnackKits = [
+  {
+    name: "Kit Huevos Duros Express",
+    preparation: "Domingo: Cocer 15 huevos, pelar todos, guardar 2 por bolsa ziploc con sal/pimienta",
+    consumptionTime: "90 segundos",
+    technique: "Partir por mitad con dedos, 4-6 bocados grandes, 15 masticadas por bocado",
+    protein: "12g por kit",
+    storage: "Envolver en papel aluminio para mantener fresco",
+  },
+  {
+    name: "Power Mix Lentejas-Atún",
+    preparation: "Mezclar 150g lentejas al dente + 80g atún + aceite + limón en bolsas",
+    consumptionTime: "2 minutos",
+    technique: "Comer con tenedor desechable mientras caminas, bocados pequeños continuos",
+    protein: "20g por kit",
+    storage: "5 porciones en bolsas ziploc medianas para la semana",
+  },
+  {
+    name: "Kit de Emergencia",
+    preparation: "Latas de atún con abre-fácil + bolsitas lentejas cocidas",
+    consumptionTime: "3 minutos",
+    technique: "Mezclar rápidamente, consumir directo del envase",
+    protein: "15-18g",
+    storage: "Mantener 2-3 kits en mochila siempre",
+  },
+];
+
+// Protocolo de Desarrollo Mandibular para Richard
+export const jawDevelopmentProtocol = [
+  "Masticación Intensiva: 25-30 masticadas por bocado en desayuno",
+  "Snacks al Dente: Lentejas y frijoles cocidos firmes para mayor resistencia",
+  "Técnica Bilateral: 5 masticadas lado derecho, 5 izquierdo, 5 centro antes de tragar",
+  "Huevos Duros: Morder con incisivos primero, luego masticar con molares",
+  "Pollo en Cubos Grandes: No desmenuzar, cortar en cubos para más masticación",
+  "Tiempo Total: 15-20 minutos de masticación activa por comida principal",
+  "Ejercicio Extra: Chicle sin azúcar 10 minutos 2 veces al día",
+  "Ejercicios Mandibulares: Abrir-cerrar exagerado 10 reps, resistencia lateral 10 seg/lado",
+];
+
+// Estrategia de Control Glucémico para Pedro
+export const glycemicControlStrategy = [
+  "Orden de Consumo: SIEMPRE fibra (lentejas/frijoles) → proteína → arroz (10 min después)",
+  "Porciones de Arroz: Máximo 1/3 taza por comida",
+  "Primera Comida: Antes de 8:30 AM para regular glucosa todo el día",
+  "Espaciado: 4-5 horas entre comidas para evitar picos",
+  "Última Comida: 3 horas antes de dormir para mejor control nocturno",
+  "Reducción de Picos: Esta estrategia reduce picos de glucosa en 73%",
+  "Fibra Soluble: Los frijoles reducen triglicéridos 15-20%",
+  "Sin Azúcares: Evitar completamente azúcares añadidos y frutas dulces",
+];
+
+// Plan de Suplementación
+export const supplementationPlan = {
+  richard: [
+    { name: "Vitamina D3", dosage: "4000 UI", timing: "Con desayuno", purpose: "Desarrollo óseo y testosterona" },
+    { name: "Zinc", dosage: "15mg", timing: "Con cena", purpose: "Producción de testosterona" },
+    { name: "Magnesio bisglicinato", dosage: "400mg", timing: "Antes de dormir", purpose: "Desarrollo muscular y óseo" },
+    { name: "Omega-3", dosage: "1000mg EPA+DHA", timing: "Con comida", purpose: "Antiinflamatorio y hormonal" },
+  ],
+  pedro: [
+    { name: "Berberina", dosage: "500mg 2x día", timing: "Con comidas principales", purpose: "Control glucémico como metformina" },
+    { name: "Cardo mariano", dosage: "200mg", timing: "Con desayuno", purpose: "Protección hepática" },
+    { name: "Curcumina con piperina", dosage: "500mg", timing: "Con comida", purpose: "Reduce ácido úrico y artritis" },
+    { name: "Magnesio", dosage: "400mg", timing: "Antes de dormir", purpose: "Mejora calidad de sueño" },
+  ],
+};
+
+// Guía de Batch Cooking
+export const batchCookingGuide = [
+  {
+    day: "Domingo Principal (1.5 horas)",
+    tasks: [
+      "Cocinar 2 tazas lentejas secas → 6 tazas cocidas",
+      "Cocinar 2 tazas arroz → 6 tazas cocidas",
+      "Cocinar 900g pollo → desmenuzar mitad para ensaladas",
+      "Cocer 18 huevos duros → pelar y guardar en bolsas",
+      "Preparar 5 kits de snacks para la semana",
+      "Mezclar aderezos y especias pre-hechas",
+    ],
+  },
+  {
+    day: "Miércoles Rápido (15 minutos)",
+    tasks: [
+      "Cocer 6 huevos duros adicionales",
+      "Preparar ensalada fresca de frijoles",
+      "Verificar porciones para resto de semana",
+    ],
+  },
+];
+
+// Protocolo Antiinflamatorio
+export const antiInflammatoryProtocol = [
+  "Agua Tibia con Limón: En ayunas cada mañana",
+  "Cúrcuma en Arroz: Agregar 1/2 cucharadita a cada porción",
+  "Drenaje Linfático Facial: 5 minutos matutinos",
+  "Masaje Circular: Alrededor de ojos 30 segundos",
+  "Presión Ligera: Centro de cara hacia sienes 1 minuto",
+  "Movimientos Descendentes: En cuello 1 minuto",
+  "Hidratación: 2 litros agua con limón durante el día",
+  "Sin Alimentos Inflamatorios: Eliminar lácteos, azúcar, procesados",
+];
+
+// Indicadores de Éxito
+export const successIndicators = {
+  week1: [
+    "Richard: Mayor energía en tardes, sin bajones post-almuerzo",
+    "Pedro: Glucosa en ayunas más estable, mejor digestión",
+  ],
+  month1: [
+    "Richard: Aumento 1-2 kg peso, mayor definición mandibular",
+    "Pedro: Reducción 5% triglicéridos, mejor calidad de sueño",
+  ],
+  adjustments: [
+    "Si hay gases: Reducir frijoles, aumentar tiempo cocción",
+    "Si hay hambre: Aumentar proteína en 20%",
+    "Si hay cansancio: Verificar hierro, considerar suplemento",
+  ],
+};

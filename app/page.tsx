@@ -4,14 +4,21 @@ import { Tabs, Tab } from "@heroui/react";
 
 import {
   richardSchedule,
-  fatherSchedule,
+  pedroSchedule,
   richardMealPlan,
-  fatherMealPlan,
+  pedroMealPlan,
   recipes,
   shoppingList,
   sleepTips,
   prepDays,
   quickOptions,
+  quickSnackKits,
+  jawDevelopmentProtocol,
+  glycemicControlStrategy,
+  supplementationPlan,
+  batchCookingGuide,
+  antiInflammatoryProtocol,
+  successIndicators,
 } from "./data/food-plan-data";
 import { refluxTips } from "./data/reflux-tips";
 
@@ -25,6 +32,13 @@ import { PrepDaysList } from "@/components/PrepDaysList";
 import { QuickOptions } from "@/components/QuickOptions";
 import { Hero } from "@/components/Hero";
 import { SectionHeader } from "@/components/SectionHeader";
+import { SupplementationCard } from "@/components/SupplementationCard";
+import { JawDevelopmentGuide } from "@/components/JawDevelopmentGuide";
+import { QuickSnackKits } from "@/components/QuickSnackKits";
+import { GlycemicControlTips } from "@/components/GlycemicControlTips";
+import { BatchCookingSchedule } from "@/components/BatchCookingSchedule";
+import { AntiInflammatoryGuide } from "@/components/AntiInflammatoryGuide";
+import { ProgressTracker } from "@/components/ProgressTracker";
 
 export default function Home() {
   return (
@@ -77,7 +91,7 @@ export default function Home() {
             title="Horarios para Padre"
           />
           <div className="transform transition-all hover:scale-[1.01]">
-            <MealSchedule items={fatherSchedule} title="Padre (53 años)" />
+            <MealSchedule items={pedroSchedule} title="Padre (53 años)" />
           </div>
         </div>
       </div>
@@ -100,63 +114,84 @@ export default function Home() {
               />
             </svg>
           }
-          subtitle="Organiza tus comidas para la semana"
-          title="Plan de comidas semanal"
+          subtitle="Organiza tus comidas y utiliza guías especializadas"
+          title="Plan de alimentación completo"
         />
         <div className="bg-content1 p-6 rounded-xl shadow-md">
           <Tabs
             fullWidth
-            aria-label="Selección de persona"
+            aria-label="Secciones del plan"
             className="mb-6"
             color="primary"
             variant="underlined"
           >
-            <Tab key="richard" title="Richard (18 años)">
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-4">
-                <MealPlanDay
-                  day="Lunes"
-                  meals={richardMealPlan.monday}
-                  person="Richard"
-                />
-                <MealPlanDay
-                  day="Martes"
-                  meals={richardMealPlan.tuesday}
-                  person="Richard"
-                />
-                <MealPlanDay
-                  day="Miércoles"
-                  meals={richardMealPlan.wednesday}
-                  person="Richard"
-                />
-                <MealPlanDay
-                  day="Jueves"
-                  meals={richardMealPlan.thursday}
-                  person="Richard"
-                />
-              </div>
+            <Tab key="planes" title="Planes de Comidas">
+              <Tabs
+                fullWidth
+                aria-label="Selección de persona"
+                className="mb-6"
+                color="secondary"
+                variant="solid"
+              >
+                <Tab key="richard" title="Richard (18 años)">
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-4">
+                    <MealPlanDay
+                      day="Lunes"
+                      meals={richardMealPlan.monday}
+                      person="Richard"
+                    />
+                    <MealPlanDay
+                      day="Martes"
+                      meals={richardMealPlan.tuesday}
+                      person="Richard"
+                    />
+                    <MealPlanDay
+                      day="Miércoles"
+                      meals={richardMealPlan.wednesday}
+                      person="Richard"
+                    />
+                    <MealPlanDay
+                      day="Jueves"
+                      meals={richardMealPlan.thursday}
+                      person="Richard"
+                    />
+                  </div>
+                </Tab>
+                <Tab key="pedro" title="Padre (53 años)">
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-4">
+                    <MealPlanDay
+                      day="Lunes"
+                      meals={pedroMealPlan.monday}
+                      person="Padre"
+                    />
+                    <MealPlanDay
+                      day="Martes"
+                      meals={pedroMealPlan.tuesday}
+                      person="Padre"
+                    />
+                    <MealPlanDay
+                      day="Miércoles"
+                      meals={pedroMealPlan.wednesday}
+                      person="Padre"
+                    />
+                    <MealPlanDay
+                      day="Jueves"
+                      meals={pedroMealPlan.thursday}
+                      person="Padre"
+                    />
+                  </div>
+                </Tab>
+              </Tabs>
             </Tab>
-            <Tab key="father" title="Padre (53 años)">
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-4">
-                <MealPlanDay
-                  day="Lunes"
-                  meals={fatherMealPlan.monday}
-                  person="Padre"
-                />
-                <MealPlanDay
-                  day="Martes"
-                  meals={fatherMealPlan.tuesday}
-                  person="Padre"
-                />
-                <MealPlanDay
-                  day="Miércoles"
-                  meals={fatherMealPlan.wednesday}
-                  person="Padre"
-                />
-                <MealPlanDay
-                  day="Jueves"
-                  meals={fatherMealPlan.thursday}
-                  person="Padre"
-                />
+            <Tab key="guias" title="Guías Especiales">
+              <div className="grid gap-8">
+                <SupplementationCard richard={supplementationPlan.richard} pedro={supplementationPlan.pedro} />
+                <QuickSnackKits kits={quickSnackKits} />
+                <JawDevelopmentGuide protocols={jawDevelopmentProtocol} />
+                <GlycemicControlTips strategies={glycemicControlStrategy} />
+                <BatchCookingSchedule sessions={batchCookingGuide} />
+                <AntiInflammatoryGuide protocols={antiInflammatoryProtocol} />
+                <ProgressTracker indicators={successIndicators} />
               </div>
             </Tab>
           </Tabs>
@@ -193,8 +228,10 @@ export default function Home() {
               <RecipeCard
                 preparation={recipe.preparation}
                 prerequisite={recipe.prerequisite}
+                ingredients={recipe.ingredients}
                 steps={recipe.steps}
                 title={recipe.title}
+                note={recipe.note}
               />
             </div>
           ))}

@@ -10,14 +10,18 @@ type RecipeProps = {
   title: string;
   preparation: string;
   prerequisite?: string;
+  ingredients?: string[];
   steps: Step[];
+  note?: string;
 };
 
 export function RecipeCard({
   title,
   preparation,
   prerequisite,
+  ingredients,
   steps,
+  note,
 }: RecipeProps) {
   return (
     <div className="w-full bg-content1 p-6 rounded-xl shadow-md h-full overflow-hidden relative border border-primary-100 dark:border-primary-900">
@@ -51,6 +55,33 @@ export function RecipeCard({
         )}
       </div>
 
+      {ingredients && ingredients.length > 0 && (
+        <div className="mb-4">
+          <h4 className="font-semibold text-md mb-2 flex items-center gap-2">
+            <svg
+              className="h-5 w-5 text-secondary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+              />
+            </svg>
+            Ingredientes:
+          </h4>
+          <ul className="list-disc list-inside space-y-1 text-sm text-default-600 dark:text-default-400 pl-2">
+            {ingredients.map((ingredient, index) => (
+              <li key={index}>{ingredient}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <div>
         <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
           <svg
@@ -78,6 +109,36 @@ export function RecipeCard({
           ))}
         </ol>
       </div>
+
+      {note && (
+        <div className="mt-4 p-3 rounded-lg border-l-4" style={{
+          backgroundColor: note.includes('Richard') ? 'rgb(59 130 246 / 0.1)' : 'rgb(34 197 94 / 0.1)',
+          borderColor: note.includes('Richard') ? 'rgb(59 130 246)' : 'rgb(34 197 94)'
+        }}>
+          <div className="flex items-start gap-2">
+            <svg
+              className="h-5 w-5 mt-0.5"
+              style={{ color: note.includes('Richard') ? 'rgb(59 130 246)' : 'rgb(34 197 94)' }}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+              />
+            </svg>
+            <p className="text-sm font-medium" style={{ 
+              color: note.includes('Richard') ? 'rgb(30 64 175)' : 'rgb(21 128 61)' 
+            }}>
+              {note}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
